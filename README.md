@@ -2,8 +2,8 @@
 
 > A Java library for working with Dash
 
-[![Tests](https://github.com/dashevo/dashj-bls/workflows/CI/badge.svg?branch=master)](https://github.com/dashevo/dashj-bls/actions)
-
+[![Tests](https://github.com/dashevo/dashj-bls/workflows/Java%20CI/badge.svg?branch=master)](https://github.com/dashevo/dashj-bls/actions)
+![codecov](https://codecov.io/gh/dashevo/dashj-bls/branch/master/graph/badge.svg)
 ### Welcome to dashj
 
 The dashj-bls library is a Java implementation of the Dash BLS library.
