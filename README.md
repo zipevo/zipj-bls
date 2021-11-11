@@ -2,7 +2,7 @@
 
 > A Java library for working with Dash
 
-[![Build Status](https://travis-ci.com/dashevo/dashj.svg?token=Pzix7aqnMuGS9c6BmBz2&branch=master)](https://travis-ci.com/dashevo/dashj)
+[![Tests](https://github.com/dashevo/dashj-bls/workflows/CI/badge.svg?branch=master)](https://github.com/dashevo/dashj-bls/actions)
 
 ### Welcome to dashj
 
