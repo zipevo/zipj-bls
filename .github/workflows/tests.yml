@@ -23,4 +23,4 @@ jobs:
       - name: build and run tests
         run: |
           git submodule update --init --recursive
-          mvn -q clean install -DskipTests
+          mvn -q clean install -DskipTests -Dmaven.javadoc.skip=true
