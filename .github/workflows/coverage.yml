@@ -17,5 +17,6 @@ jobs:
       - name: Run coverage
         run: |
           git submodule update --init --recursive
-          mvn clean test
+          mvn clean package -DskipTests
+          mvn test
           bash <(curl -s https://codecov.io/bash)
