@@ -1,0 +1,26 @@
+name: Code coverage
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Code coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+      - name: Run coverage
+        run: |
+          git submodule update --init --recursive
+          mvn clean package -DskipTests -Dmaven.javadoc.skip=true
+          mvn test -Pno-build-bls
+          bash <(curl -s https://codecov.io/bash)
