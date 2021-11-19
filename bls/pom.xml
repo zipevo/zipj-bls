@@ -5,7 +5,7 @@
     <parent>
         <artifactId>dashj-bls-parent</artifactId>
         <groupId>org.dashj</groupId>
-        <version>0.18.0</version>
+        <version>0.18.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -147,7 +147,7 @@
                                     <!-- classifier is "null" if not present -->
                                     <urns>
                                         <urn>junit:junit:4.12:jar:null:test:2973d150c0dc1fefe998f834810d68f278ea58ec</urn>
-                                        <urn>com.google.guava:guava:27.1-android:jar:null:compile:a80ef47421d6607e749f8b7282dd7dee61adfea7</urn>
+                                        <urn>com.google.guava:guava:28.2-android:jar:null:compile:e11db6e27f5d1ec19826848a865c496c798398fa</urn>
                                         <!-- A check for the rules themselves -->
                                         <urn>uk.co.froot.maven.enforcer:digest-enforcer-rules:0.0.1:jar:null:runtime:16a9e04f3fe4bb143c42782d07d5faf65b32106f</urn>
                                     </urns>
