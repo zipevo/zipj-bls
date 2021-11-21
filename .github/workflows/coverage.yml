@@ -23,4 +23,6 @@ jobs:
           git submodule update --init --recursive
           mvn clean package -DskipTests -Dmaven.javadoc.skip=true
           mvn test -Pno-build-bls
-          bash <(curl -s https://codecov.io/bash)
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
+          chmod +x codecov
+          ./codecov -t ${CODECOV_TOKEN}
