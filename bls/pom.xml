@@ -26,7 +26,7 @@
             <plugin>
                 <groupId>com.googlecode.cmake-maven-project</groupId>
                 <artifactId>cmake-maven-plugin</artifactId>
-                <version>3.7.2-b1</version>
+                <version>3.14.5-b1</version>
                 <executions>
                     <execution>
                         <id>cmake-generate</id>
@@ -287,7 +287,7 @@
     <properties>
         <classifier>${platform}</classifier>
         <download.cmake>true</download.cmake>
-        <cmake.version>3.7.2-b1</cmake.version>
+        <cmake.version>3.23.2-b1</cmake.version>
     </properties>
 
     <profiles>
@@ -522,7 +522,7 @@
                         <plugin>
                             <groupId>com.googlecode.cmake-maven-project</groupId>
                             <artifactId>cmake-maven-plugin</artifactId>
-                            <version>3.7.2-b1</version>
+                            <version>3.23.2-b1</version>
                             <executions>
                                 <execution>
                                     <id>cmake-generate</id> <!-- here there must be the same identifier as defined in <build><plugins> section -->
