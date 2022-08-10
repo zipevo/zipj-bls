@@ -23,6 +23,9 @@ typedef long size_t;
 namespace std {
   %template(Uint8Vector) vector<uint8_t>;
   %template(Uint8VectorVector) vector<vector<uint8_t>>;
+    %template(PrivateKeyVector) vector<bls::PrivateKey>;
+    %template(G1ElementVector) vector<bls::G1Element>;
+    %template(G2ElementVector) vector<bls::G2Element>;
 }
 
 namespace bls {
@@ -41,8 +44,6 @@ namespace bls {
   %rename ("$ignore", fullname=1) AugSchemeMPL::AggregateVerify(const vector<G1Element>& pubkeys, const vector<Bytes>& messages, const G2Element& signature) override;
 }
 
-
-//%ignore bls::Bytes::operator[](const int nIndex) const;
 %rename (objectEquals) operator==(ChainCode const &a, ChainCode const &b);
 %rename (objectEquals) operator==(ExtendedPrivateKey const &a, ExtendedPrivateKey const &b);
 %rename (objectEquals) operator==(ExtendedPublicKey const &a, ExtendedPublicKey const &b);
@@ -50,7 +51,6 @@ namespace bls {
 %rename (objectEquals) operator==(PublicKey const &a, PublicKey const &b);
 %rename (objectEquals) operator==(G1Element const &a, G1Element const &b);
 %rename (objectEquals) operator==(G2Element const &a, G2Element const &b);
-//%rename (notEqualsChainCode) operator!=(ChainCode const &a, ChainCode const &b);
 %ignore operator<<;
 
 %typemap(jni) (unsigned char *) "jbyteArray"
@@ -68,6 +68,29 @@ namespace bls {
 
 %typemap(freearg) (unsigned char *) ""
 
+// Language independent exception handler
+%include exception.i
+
+%exception {
+	try {
+		$function
+	} catch(std::string x) {
+	    SWIG_exception(SWIG_ValueError, x.c_str());
+	} catch(std::runtime_error x) {
+        SWIG_exception(SWIG_RuntimeError, x.what());
+    } catch(std::invalid_argument x) {
+        SWIG_exception(SWIG_ValueError, x.what());
+    } catch(std::length_error x) {
+        SWIG_exception(SWIG_ValueError, x.what());
+    } catch(std::logic_error x) {
+        SWIG_exception(SWIG_ValueError, x.what());
+    } catch(std::exception x) {
+        SWIG_exception(SWIG_SystemError, x.what());
+    } catch(...) {
+		SWIG_exception(SWIG_RuntimeError,"Unknown exception");
+	}
+}
+
 %include "src/main/cpp/bls-signatures/src/bls.hpp"
 %include "src/main/cpp/bls-signatures/src/chaincode.hpp"
 %include "src/main/cpp/bls-signatures/src/elements.hpp"
@@ -80,8 +103,6 @@ namespace bls {
 %include "src/main/cpp/bls-signatures/src/threshold.hpp"
 
 namespace std {
-  %template(PrivateKeyVector) vector<bls::PrivateKey>;
-  %template(G1ElementVector) vector<bls::G1Element>;
-  %template(G2ElementVector) vector<bls::G2Element>;
+
 }
 

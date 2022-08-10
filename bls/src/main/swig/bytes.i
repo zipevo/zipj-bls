@@ -27,13 +27,15 @@ class Bytes;
 
 %typemap(in) Bytes
 %{
-    $1 = new Bytes((const uint8_t *)jenv->GetByteArrayElements($input, 0), jenv->GetArrayLength($input));
+    //$1 = new Bytes((const uint8_t *)jenv->GetByteArrayElements($input, 0), jenv->GetArrayLength($input));
+    Bytes $1_bytesObject((const uint8_t *)jenv->GetByteArrayElements($input, 0), jenv->GetArrayLength($input));
+    $1 = &$1_bytesObject;
 %}
 
 %typemap(argout) Bytes {
     // release Bytes
     JCALL3(ReleaseByteArrayElements, jenv, $input, (jbyte *) $1->begin(), 0);
-    delete $input;
+    // delete $input;
 }
 
 %typemap(out) Bytes {
@@ -60,12 +62,14 @@ class Bytes;
 
 %typemap(in) const Bytes &
 %{
-    $1 = new Bytes((const uint8_t *)jenv->GetByteArrayElements($input, 0), jenv->GetArrayLength($input));
+    //$1 = new Bytes((const uint8_t *)jenv->GetByteArrayElements($input, 0), jenv->GetArrayLength($input));
+    Bytes $1_bytesObject((const uint8_t *)jenv->GetByteArrayElements($input, 0), jenv->GetArrayLength($input));
+    $1 = &$1_bytesObject;
 %}
 %typemap(argout) Bytes {
     // release Bytes
     JCALL3(ReleaseByteArrayElements, jenv, $input, (jbyte *) $1->begin(), 0);
-    delete $input;
+    //delete $input;
 }
 
 %typemap(out) const Bytes & {
