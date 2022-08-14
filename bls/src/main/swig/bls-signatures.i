@@ -42,6 +42,19 @@ namespace bls {
   %rename ("$ignore", fullname=1) AugSchemeMPL::Verify(const G1Element& pubkey, const Bytes& message, const G2Element& signature) override;
   %rename ("$ignore", fullname=1) AugSchemeMPL::AggregateVerify(const vector<Bytes>& pubkeys, const vector<Bytes>& messages, const Bytes& signature) override;
   %rename ("$ignore", fullname=1) AugSchemeMPL::AggregateVerify(const vector<G1Element>& pubkeys, const vector<Bytes>& messages, const G2Element& signature) override;
+
+  %extend BLS {
+    static const long RLC_OK = 0;
+    static long getContextError() {
+        return core_get()->code;
+    }
+    static void setContextError(long error) {
+        core_get()->code = error;
+    }
+    static long getContext() {
+        return (long)core_get();
+    }
+  }
 }
 
 %rename (objectEquals) operator==(ChainCode const &a, ChainCode const &b);
