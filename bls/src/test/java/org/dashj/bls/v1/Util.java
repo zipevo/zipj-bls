@@ -2,8 +2,6 @@ package org.dashj.bls.v1;
 
 import com.google.common.io.BaseEncoding;
 
-import java.util.Arrays;
-
 public class Util {
     public static final BaseEncoding HEX = BaseEncoding.base16().lowerCase();
 
@@ -37,5 +35,13 @@ public class Util {
             elements[i] = (byte)(bytes.get(i) & 0xff);
         }
         return elements;
+    }
+
+    public static String hexStr(Uint8Vector bytes) {
+        StringBuilder builder = new StringBuilder();
+        for (Short aByte : bytes) {
+            builder.append(String.format("%02x", (byte) (aByte & 0xff)));
+        }
+        return builder.toString();
     }
 }
