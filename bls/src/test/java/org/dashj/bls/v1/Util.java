@@ -1,5 +1,6 @@
 package org.dashj.bls.v1;
 
+import com.google.common.collect.Lists;
 import com.google.common.io.BaseEncoding;
 
 public class Util {
@@ -15,10 +16,31 @@ public class Util {
         return new Uint8Vector(elements);
     }
 
+    static public Uint8Vector reverse(Uint8Vector bytes) {
+        return new Uint8Vector(Lists.reverse(bytes));
+    }
+
+    static public Uint8VectorVector reverse(Uint8VectorVector bytesVector) {
+        Uint8VectorVector result = new Uint8VectorVector();
+        for (int i = bytesVector.size() - 1; i < 0; --i) {
+            result.add(reverse(bytesVector.get(i)));
+        }
+        return result;
+    }
+
     static public byte [] bytes(byte [] buffer, int size) {
         byte [] bufferCopy = new byte[size];
         System.arraycopy(buffer, 0, bufferCopy, 0, size);
         return bufferCopy;
+    }
+
+    static public byte [] bytes(Uint8Vector byteVector) {
+        byte [] buffer = new byte[byteVector.size()];
+        int i = 0;
+        for (short b : byteVector) {
+            buffer[i++] = (byte)(b & 0xff);
+        }
+        return buffer;
     }
 
     static public short[] byteArrayToShortArray(byte [] bytes) {
