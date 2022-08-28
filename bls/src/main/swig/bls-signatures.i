@@ -11,7 +11,8 @@
 #include "bls-signatures/src/schemes.hpp"
 #include "bls-signatures/src/threshold.hpp"
 #include "bls-signatures/src/util.hpp"
-
+#include "threshold-v1.hpp"
+using namespace bls;
 %}
 
 %include "std_vector.i"
@@ -39,9 +40,19 @@ namespace bls {
   %ignore Util;
 
   %rename("%(lowercamelcase)s", %$isfunction) "";
+  %rename ("$ignore", fullname=1) CoreMPL::Aggregate(const vector<Bytes>& signatures);
+  %rename ("$ignore", fullname=1) CoreMPL::AggregateVerify(const vector<Bytes>& pubkeys, const vector<Bytes>& messages, const Bytes& signature) override;
+  %rename ("$ignore", fullname=1) CoreMPL::AggregateVerify(const vector<G1Element>& pubkeys, const vector<Bytes>& messages, const G2Element& signature) override;
   %rename ("$ignore", fullname=1) AugSchemeMPL::Verify(const G1Element& pubkey, const Bytes& message, const G2Element& signature) override;
   %rename ("$ignore", fullname=1) AugSchemeMPL::AggregateVerify(const vector<Bytes>& pubkeys, const vector<Bytes>& messages, const Bytes& signature) override;
   %rename ("$ignore", fullname=1) AugSchemeMPL::AggregateVerify(const vector<G1Element>& pubkeys, const vector<Bytes>& messages, const G2Element& signature) override;
+  %rename ("$ignore", fullname=1) BasicSchemeMPL::Verify(const G1Element& pubkey, const Bytes& message, const G2Element& signature) override;
+  %rename ("$ignore", fullname=1) BasicSchemeMPL::AggregateVerify(const vector<Bytes>& pubkeys, const vector<Bytes>& messages, const Bytes& signature) override;
+  %rename ("$ignore", fullname=1) BasicSchemeMPL::AggregateVerify(const vector<G1Element>& pubkeys, const vector<Bytes>& messages, const G2Element& signature) override;
+  %rename ("$ignore", fullname=1) LegacySchemeMPL::Verify(const G1Element& pubkey, const Bytes& message, const G2Element& signature) override;
+  %rename ("$ignore", fullname=1) LegacySchemeMPL::AggregateVerify(const vector<Bytes>& pubkeys, const vector<Bytes>& messages, const Bytes& signature) override;
+  %rename ("$ignore", fullname=1) LegacySchemeMPL::AggregateVerify(const vector<G1Element>& pubkeys, const vector<Bytes>& messages, const G2Element& signature) override;
+  %rename ("$ignore", fullname=1) PopSchemeMPL::FastAggregateVerify(const vector<Bytes>& pubkeys, const Bytes& message, const Bytes& signature);
 
   %extend BLS {
     static const long RLC_OK = 0;
@@ -55,8 +66,10 @@ namespace bls {
         return (long)core_get();
     }
   }
+  %nspace Threshold;
 }
 
+// equality operators
 %rename (objectEquals) operator==(ChainCode const &a, ChainCode const &b);
 %rename (objectEquals) operator==(ExtendedPrivateKey const &a, ExtendedPrivateKey const &b);
 %rename (objectEquals) operator==(ExtendedPublicKey const &a, ExtendedPublicKey const &b);
@@ -64,7 +77,25 @@ namespace bls {
 %rename (objectEquals) operator==(PublicKey const &a, PublicKey const &b);
 %rename (objectEquals) operator==(G1Element const &a, G1Element const &b);
 %rename (objectEquals) operator==(G2Element const &a, G2Element const &b);
+
+// addition operators
+%rename (add) operator+(const G1Element& a, const G1Element& b);
+%rename (add) operator+(const G2Element& a, const G2Element& b);
+
+// multiply operators
+%rename (multiply) operator*(const G1Element& a, const G1Element& b);
+%rename (multiply) operator*(const G2Element& a, const G2Element& b);
+%rename (multiply) operator*(const G1Element& a, const PrivateKey& b);
+%rename (multiply) operator*(const PrivateKey& a, const G1Element& b);
+%rename (multiply) operator*(const G2Element& a, const PrivateKey& b);
+%rename (multiply) operator*(const PrivateKey& a, const G2Element& b);
+
+// ignore these operators
 %ignore operator<<;
+%ignore operator=;
+%ignore operator!=;
+%ignore operator*=;
+%ignore operator+=;
 
 %typemap(jni) (unsigned char *) "jbyteArray"
 %typemap(jtype) (unsigned char *) "byte[]"
@@ -114,7 +145,7 @@ namespace bls {
 %include "src/main/cpp/bls-signatures/src/hkdf.hpp"
 %include "src/main/cpp/bls-signatures/src/schemes.hpp"
 %include "src/main/cpp/bls-signatures/src/threshold.hpp"
-
+%include "src/main/cpp/threshold-v1.hpp"
 namespace std {
 
 }
