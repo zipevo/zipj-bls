@@ -37,6 +37,7 @@ namespace bls {
   %ignore G2Element::ToNative;
   %ignore GTElement::FromNative;
   %ignore GTElement::ToNative;
+  %ignore PrivateKey::PrivateKey(PrivateKey &&k);
   %ignore Util;
 
   %rename("%(lowercamelcase)s", %$isfunction) "";
