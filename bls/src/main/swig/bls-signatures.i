@@ -54,6 +54,10 @@ namespace bls {
   %rename ("$ignore", fullname=1) LegacySchemeMPL::AggregateVerify(const vector<G1Element>& pubkeys, const vector<Bytes>& messages, const G2Element& signature) override;
   %rename ("$ignore", fullname=1) PopSchemeMPL::FastAggregateVerify(const vector<Bytes>& pubkeys, const Bytes& message, const Bytes& signature);
 
+  %ignore Threshold::PrivateKeyRecover(const std::vector<PrivateKey>& sks, const std::vector<Bytes>& ids);
+  %ignore Threshold::PublicKeyRecover(const std::vector<G1Element>& sks, const std::vector<Bytes>& ids);
+  %ignore Threshold::SignatureRecover(const std::vector<G2Element>& sigs, const std::vector<Bytes>& ids);
+
   %extend BLS {
     static const long RLC_OK = 0;
     static long getContextError() {
@@ -77,6 +81,7 @@ namespace bls {
 %rename (objectEquals) operator==(PublicKey const &a, PublicKey const &b);
 %rename (objectEquals) operator==(G1Element const &a, G1Element const &b);
 %rename (objectEquals) operator==(G2Element const &a, G2Element const &b);
+%rename (objectEquals) operator==(GTElement const &a, GTElement const &b);
 
 // addition operators
 %rename (add) operator+(const G1Element& a, const G1Element& b);
@@ -89,6 +94,10 @@ namespace bls {
 %rename (multiply) operator*(const PrivateKey& a, const G1Element& b);
 %rename (multiply) operator*(const G2Element& a, const PrivateKey& b);
 %rename (multiply) operator*(const PrivateKey& a, const G2Element& b);
+%rename (multiply) operator*(GTElement &a, GTElement &b);
+
+// bitwise operators
+%rename (andOperator) operator&(const G1Element &a, const G2Element &b);
 
 // ignore these operators
 %ignore operator<<;
@@ -96,6 +105,12 @@ namespace bls {
 %ignore operator!=;
 %ignore operator*=;
 %ignore operator+=;
+%ignore operator*(const G1Element &a, const bn_t &k);
+%ignore operator*(const bn_t &k, const G1Element &a);
+%ignore operator*(const G2Element &a, const bn_t &k);
+%ignore operator*(const bn_t &k, const G2Element &a);
+%ignore operator*(const PrivateKey& a, const bn_t& k);
+%ignore operator*(const bn_t& k, const PrivateKey& a);
 
 %typemap(jni) (unsigned char *) "jbyteArray"
 %typemap(jtype) (unsigned char *) "byte[]"
@@ -146,7 +161,5 @@ namespace bls {
 %include "src/main/cpp/bls-signatures/src/schemes.hpp"
 %include "src/main/cpp/bls-signatures/src/threshold.hpp"
 %include "src/main/cpp/threshold-v1.hpp"
-namespace std {
 
-}
 
