@@ -1,7 +1,9 @@
-package org.dashj.bls;
+package org.dashj.bls.Utils;
 
 import com.google.common.collect.Lists;
 import com.google.common.io.BaseEncoding;
+import org.dashj.bls.Uint8Vector;
+import org.dashj.bls.Uint8VectorVector;
 
 public class Util {
     public static final BaseEncoding HEX = BaseEncoding.base16().lowerCase();
@@ -62,6 +64,14 @@ public class Util {
     public static String hexStr(Uint8Vector bytes) {
         StringBuilder builder = new StringBuilder();
         for (Short aByte : bytes) {
+            builder.append(String.format("%02x", (byte) (aByte & 0xff)));
+        }
+        return builder.toString();
+    }
+
+    public static String hexStr(byte [] bytes) {
+        StringBuilder builder = new StringBuilder();
+        for (byte aByte : bytes) {
             builder.append(String.format("%02x", (byte) (aByte & 0xff)));
         }
         return builder.toString();
