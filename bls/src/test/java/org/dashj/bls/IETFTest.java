@@ -15,6 +15,6 @@ public class IETFTest extends BaseTest {
         PrivateKey skobj = PrivateKey.fromBytes(Util.hexToBytes(sk));
         G2Element sig = new BasicSchemeMPL().sign(skobj, msg);
         byte [] sig1 = Util.hexToBytes(sig1BasicHex);
-        assertTrue(DASHJBLS.objectEquals(sig, G2Element.fromBytes(sig1)));
+        assertObjectEquals(sig, G2Element.fromBytes(sig1));
     }
 }

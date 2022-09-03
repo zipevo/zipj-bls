@@ -41,9 +41,9 @@ public class SignatureTest extends BaseTest {
         PrivateKey sk = PrivateKey.fromBytes(sk0);
         assertObjectEquals(sk.getG1Element(), new G1Element());  // Infinity
         assertObjectEquals(sk.getG2Element(), new G2Element());  // Infinity
-        assertTrue(DASHJBLS.objectEquals(new BasicSchemeMPL().sign(sk, new byte[]{1, 2, 3}), new G2Element()));
-        assertTrue(DASHJBLS.objectEquals(new AugSchemeMPL().sign(sk, new byte[]{1, 2, 3}), new G2Element()));
-        assertTrue(DASHJBLS.objectEquals(new PopSchemeMPL().sign(sk, new byte[]{1, 2, 3}), new G2Element()));
+        assertObjectEquals(new BasicSchemeMPL().sign(sk, new byte[]{1, 2, 3}), new G2Element());
+        assertObjectEquals(new AugSchemeMPL().sign(sk, new byte[]{1, 2, 3}), new G2Element());
+        assertObjectEquals(new PopSchemeMPL().sign(sk, new byte[]{1, 2, 3}), new G2Element());
     }
 
     @Test

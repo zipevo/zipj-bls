@@ -9,7 +9,6 @@ import java.util.List;
 import static org.dashj.bls.Utils.Util.bytes;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 public class LegacySchemeTest extends BaseTest {
@@ -78,12 +77,12 @@ public class LegacySchemeTest extends BaseTest {
             byte [] vecSigShareBytes = Util.hexToBytes(vecSigSharesHex.get(i));
             vecSignatureShares.add(G2Element.fromBytes (vecSigShareBytes, true));
             G2Element sigShare = new LegacySchemeMPL().sign(skShare, bytes(vecSignHash));
-            assertTrue(DASHJBLS.objectEquals(sigShare, vecSignatureShares.get(vecSignatureShares.size() - 1)));
+            assertObjectEquals(sigShare, vecSignatureShares.get(vecSignatureShares.size() - 1));
             assertArrayEquals(sigShare.serialize(true), vecSigShareBytes);
         }
 
         G2Element thresholdSignature = DASHJBLS.signatureRecover(vecSignatureShares, vecIds);
-        assertTrue(DASHJBLS.objectEquals(thresholdSignature, thresholdSignatureExpected));
+        assertObjectEquals(thresholdSignature, thresholdSignatureExpected);
         assertTrue(new LegacySchemeMPL().verify(thresholdPublicKey, bytes(vecSignHash), thresholdSignature));
     }
 }

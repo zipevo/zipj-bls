@@ -1,5 +1,7 @@
 package org.dashj.bls;
 
+import org.dashj.bls.Utils.ByteVectorList;
+import org.dashj.bls.Utils.Util;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -55,10 +57,10 @@ public class ThresholdTest extends BaseTest {
             PrivateKey skShare = privateKeyShare(sks, ids.get(i));
             G1Element pkShare = publicKeyShare(pks, ids.get(i));
             G2Element sigShare1 = signatureShare(sigs, ids.get(i));
-            assertTrue(DASHJBLS.objectEquals(skShare.getG1Element(), pkShare));
+            assertObjectEquals(skShare.getG1Element(), pkShare);
 
             G2Element sigShare2 = sign(skShare, vecHash);
-            assertTrue(objectEquals(sigShare1, sigShare2));
+            assertObjectEquals(sigShare1, sigShare2);
             assertTrue(verify(pkShare, vecHash, sigShare1));
 
             skShares.add(skShare);
@@ -69,29 +71,29 @@ public class ThresholdTest extends BaseTest {
         PrivateKeyVector rsks = new PrivateKeyVector();
         G1ElementVector rpks = new G1ElementVector();
         G2ElementVector rsigs = new G2ElementVector();
-        ArrayList<byte[]> rids = new ArrayList<>();
+        ByteVectorList rids = new ByteVectorList();
         for (int i = 0; i < 2; i++) {
             rsks.add(skShares.get(i));
             rpks.add(pkShares.get(i));
             rsigs.add(sigShares.get(i));
-            rids.add(ids.get(i));
+            rids.add(new Uint8Vector(Util.byteArrayToShortArray(ids.get(i))));
         }
-            /*PrivateKey recSk = privateKeyRecover(rsks, rids);
+            PrivateKey recSk = privateKeyRecover(rsks, rids);
             G1Element recPk = publicKeyRecover(rpks, rids);
             G2Element recSig = signatureRecover(rsigs, rids);
-            assertTrue(!objectEquals(recSk, sks.get(0)));
-            assertTrue(!objectEquals(recPk, pks.get(0)));
-            assertTrue(!objectEquals(recSig, sig));
+        assertObjectNotEquals(recSk, sks.get(0));
+        assertObjectNotEquals(recPk, pks.get(0));
+        assertObjectNotEquals(recSig, sig);
 
             rsks.add(skShares.get(2));
             rpks.add(pkShares.get(2));
             rsigs.add(sigShares.get(2));
-            rids.add(ids[2]);
+            rids.add(new Uint8Vector(Util.byteArrayToShortArray(ids.get(2))));
             recSk = privateKeyRecover(rsks, rids);
             recPk = publicKeyRecover(rpks, rids);
             recSig = signatureRecover(rsigs, rids);
             assertTrue(objectEquals(recSk, sks.get(0)));
             assertTrue(objectEquals(recPk, pks.get(0)));
-            assertTrue(objectEquals(recSig, sig));*/
+            assertTrue(objectEquals(recSig, sig));
     }
 }

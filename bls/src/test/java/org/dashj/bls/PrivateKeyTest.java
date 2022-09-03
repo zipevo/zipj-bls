@@ -33,13 +33,13 @@ public class PrivateKeyTest extends BaseTest {
         assertFalse(pk2.isZero());
         assertFalse(pk3.isZero());
         assertNotEquals(pk1, pk2);
-        assertTrue(DASHJBLS.objectEquals(pk3, pk2));
+        assertObjectEquals(pk3, pk2);
         assertTrue(pk2.getG1Element().isValid()); // cache previous g1
         assertTrue(pk2.getG2Element().isValid()); // cache previous g2
         pk2 = pk1;
         assertEquals(pk1, pk2);
-        assertTrue(DASHJBLS.objectEquals(pk1.getG1Element(), pk2.getG1Element()));
-        assertTrue(DASHJBLS.objectEquals(pk1.getG2Element(), pk2.getG2Element()));
+        assertObjectEquals(pk1.getG1Element(), pk2.getG1Element());
+        assertObjectEquals(pk1.getG2Element(), pk2.getG2Element());
         assertNotEquals(pk3, pk2);
     }
 
@@ -57,9 +57,9 @@ public class PrivateKeyTest extends BaseTest {
         G1Element privateKeyFirst2 = DASHJBLS.multiply(pk1, publicKey2);
 
 
-        assertTrue(DASHJBLS.objectEquals(publicKeyFirst1, privateKeyFirst1));
-        assertTrue(DASHJBLS.objectEquals(publicKeyFirst2, privateKeyFirst2));
-        assertTrue(DASHJBLS.objectEquals(publicKeyFirst1, privateKeyFirst2));
+        assertObjectEquals(publicKeyFirst1, privateKeyFirst1);
+        assertObjectEquals(publicKeyFirst2, privateKeyFirst2);
+        assertObjectEquals(publicKeyFirst1, privateKeyFirst2);
     }
 
     @Test
@@ -68,9 +68,9 @@ public class PrivateKeyTest extends BaseTest {
         PrivateKey pk2 = PrivateKey.randomPrivateKey();
         PrivateKey pk3 = new PrivateKey(pk2);
         //pk3.assign(pk2);
-        assertFalse(DASHJBLS.objectEquals(pk1, pk2));
-        assertFalse(DASHJBLS.objectEquals(pk1, pk3));
-        assertTrue(DASHJBLS.objectEquals(pk2, pk3));
+        assertObjectNotEquals(pk1, pk2);
+        assertObjectNotEquals(pk1, pk3);
+        assertObjectEquals(pk2, pk3);
     }
 
     @Test
@@ -80,23 +80,13 @@ public class PrivateKeyTest extends BaseTest {
         pk1.serialize(buffer);
         assertArrayEquals(buffer, pk1.serialize());
         PrivateKey pk2 = PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), true);
-        assertTrue(DASHJBLS.objectEquals(pk1, pk2));
+        assertObjectEquals(pk1, pk2);
         assertThrows(IllegalArgumentException.class, () -> PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE - 1), true));
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE + 1), true));
         PrivateKey pk3 = PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), true);
 
         byte [] bytes_ = pk3.serialize();
         PrivateKey.fromBytes(bytes_);
-        //BigInteger order = new BigInteger();
-        //bn_new(order);
-        //g1_get_ord(order);
-        //bn_write_bin(buffer, PrivateKey.PRIVATE_KEY_SIZE, order);
-        //assertTrue_NOTHROW(PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), false));
-        //assertTrue_NOTHROW(PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), true));
-        //bn_add(order, order, order);
-        //bn_write_bin(buffer, PrivateKey.PRIVATE_KEY_SIZE, order);
-        //assertTrue_THROWS(PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), false));
-        //assertTrue_NOTHROW(PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), true));
     }
 
     @Test
