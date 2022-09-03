@@ -1,11 +1,13 @@
 package org.dashj.bls;
 
 import com.google.common.collect.Lists;
+import org.dashj.bls.Utils.Util;
 import org.junit.Test;
 
 import java.util.List;
 
-import static org.dashj.bls.Util.bytes;
+import static org.dashj.bls.Utils.Util.bytes;
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
@@ -63,9 +65,8 @@ public class LegacySchemeTest extends BaseTest {
 
         Uint8Vector vecSignHash = Util.hexToUint8Vector(strSignHash);
         vecSignHash = Util.reverse(vecSignHash);
-        G1Element thresholdPublicKey = G1Element.fromByteVector (Util.hexToUint8Vector (strThresholdPublicKey), true);
-        G2Element thresholdSignatureExpected = G2Element.fromByteVector (Util.hexToUint8Vector (strThresholdSignature), true)
-        ;
+        G1Element thresholdPublicKey = G1Element.fromBytes(Util.hexToBytes(strThresholdPublicKey), true);
+        G2Element thresholdSignatureExpected = G2Element.fromBytes(Util.hexToBytes(strThresholdSignature), true);
 
         G2ElementVector vecSignatureShares = new G2ElementVector();
         Uint8VectorVector vecIds = new Uint8VectorVector();
@@ -73,12 +74,12 @@ public class LegacySchemeTest extends BaseTest {
         for (int i = 0; i < nSize; ++i) {
             vecIds.add(Util.reverse(Util.hexToUint8Vector (vecIdsHex.get(i))));
 
-            PrivateKey skShare = PrivateKey.fromByteVector (Util.hexToUint8Vector (vecSecretKeySharesHex.get(i)));
-            Uint8Vector vecSigShareBytes = Util.hexToUint8Vector (vecSigSharesHex.get(i));
-            vecSignatureShares.add(G2Element.fromByteVector (vecSigShareBytes, true));
+            PrivateKey skShare = PrivateKey.fromBytes (Util.hexToBytes (vecSecretKeySharesHex.get(i)));
+            byte [] vecSigShareBytes = Util.hexToBytes(vecSigSharesHex.get(i));
+            vecSignatureShares.add(G2Element.fromBytes (vecSigShareBytes, true));
             G2Element sigShare = new LegacySchemeMPL().sign(skShare, bytes(vecSignHash));
             assertTrue(DASHJBLS.objectEquals(sigShare, vecSignatureShares.get(vecSignatureShares.size() - 1)));
-            assertEquals(sigShare.serialize(true), vecSigShareBytes);
+            assertArrayEquals(sigShare.serialize(true), vecSigShareBytes);
         }
 
         G2Element thresholdSignature = DASHJBLS.signatureRecover(vecSignatureShares, vecIds);

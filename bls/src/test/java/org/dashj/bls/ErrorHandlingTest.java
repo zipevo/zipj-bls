@@ -1,6 +1,9 @@
 package org.dashj.bls;
 
+import org.dashj.bls.Utils.Util;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertEquals;
@@ -8,9 +11,9 @@ import static org.junit.Assert.assertThrows;
 
 public class ErrorHandlingTest extends BaseTest {
     @Test
-    public void shouldThrowOnBadPrivateKey() {}
-    {
-        Uint8Vector seed = new Uint8Vector(32, (short)0x10);
+    public void shouldThrowOnBadPrivateKey() {
+        byte[] seed = new byte[32];
+        Arrays.fill( seed, (byte) 0x10);
         PrivateKey sk1 = new BasicSchemeMPL().keyGen(seed);
         byte [] skData = new byte[G2Element.SIZE];
         sk1.serialize(skData);
@@ -18,33 +21,33 @@ public class ErrorHandlingTest extends BaseTest {
         assertThrows(IllegalArgumentException.class,() -> PrivateKey.fromBytes(Util.bytes(skData, PrivateKey.PRIVATE_KEY_SIZE)));
     }
 
-    @Test public void shouldThrowOnBadPublicKey()
-    {
-        Uint8Vector buf = new Uint8Vector(G1Element.SIZE, (short)0);
+    @Test public void shouldThrowOnBadPublicKey() {
+        byte[] buf = new byte[G1Element.SIZE];
         for (int i = 0; i < 0xFF; i++) {
-            buf.set(0, (short)i);
+            buf[0] = (byte)i;
             if (i == 0xc0) { // Infinity prefix shouldn't throw here as we have only zero values
-                G1Element.fromByteVector(buf);
+                G1Element.fromBytes(buf);
             } else {
-                assertThrows(IllegalArgumentException.class, () -> G1Element.fromByteVector(buf));
+                assertThrows(IllegalArgumentException.class, () -> G1Element.fromBytes(buf));
             }
         }
     }
 
     @Test public void shouldThrowOnBadG2Element()
     {
-        Uint8Vector buf = new Uint8Vector(G2Element.SIZE, (short)0);
+        byte[] buf = new byte[G2Element.SIZE];
+
         for (int i = 0; i < 0xFF; i++) {
-            buf.set(0, (short)i);
+            buf[0] = (byte)i;
             if (i == 0xc0) { // Infinity prefix shouldn't throw here as we have only zero values
-                G2Element.fromByteVector(buf);
+                G2Element.fromBytes(buf);
             } else {
-                assertThrows(IllegalArgumentException.class, () -> G2Element.fromByteVector(buf));
+                assertThrows(IllegalArgumentException.class, () -> G2Element.fromBytes(buf));
             }
         }
         // Trigger "G2 element must always have 48th byte start with 0b000" error case
-        buf.set(48, (short)0xFF);
-        assertThrows(IllegalArgumentException.class, () -> G2Element.fromByteVector(buf));
+        buf[48] = (byte) 0xFF;
+        assertThrows(IllegalArgumentException.class, () -> G2Element.fromBytes(buf));
     }
 
     @Test

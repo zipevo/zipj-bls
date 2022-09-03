@@ -4,17 +4,16 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.dashj.bls.v1.DASHJBLS.objectEquals;
-import static org.dashj.bls.v1.DASHJBLS.privateKeyRecover;
-import static org.dashj.bls.v1.DASHJBLS.privateKeyShare;
-import static org.dashj.bls.v1.DASHJBLS.publicKeyRecover;
-import static org.dashj.bls.v1.DASHJBLS.publicKeyShare;
-import static org.dashj.bls.v1.DASHJBLS.sign;
-import static org.dashj.bls.v1.DASHJBLS.signatureRecover;
-import static org.dashj.bls.v1.DASHJBLS.signatureShare;
-import static org.dashj.bls.v1.DASHJBLS.verify;
+import static org.dashj.bls.DASHJBLS.objectEquals;
+import static org.dashj.bls.DASHJBLS.privateKeyRecover;
+import static org.dashj.bls.DASHJBLS.privateKeyShare;
+import static org.dashj.bls.DASHJBLS.publicKeyRecover;
+import static org.dashj.bls.DASHJBLS.publicKeyShare;
+import static org.dashj.bls.DASHJBLS.sign;
+import static org.dashj.bls.DASHJBLS.signatureRecover;
+import static org.dashj.bls.DASHJBLS.signatureShare;
+import static org.dashj.bls.DASHJBLS.verify;
 import static org.dashj.bls.Entropy.getRandomSeed;
-import static org.dashj.bls.Entropy.getRandomSeedAsUint8Vector;
 import static org.junit.Assert.assertTrue;
 
 public class ThresholdTest extends BaseTest {
@@ -32,7 +31,6 @@ public class ThresholdTest extends BaseTest {
         G1ElementVector pkShares = new G1ElementVector();
         G2ElementVector sigShares = new G2ElementVector();
 
-        //Uint8Vector vecHash = getRandomSeedAsUint8Vector(32);
         byte[] vecHash = getRandomSeed(32);
 
         for (int i = 0; i < n; i++) {
@@ -40,9 +38,9 @@ public class ThresholdTest extends BaseTest {
         }
 
         for (int i = 0; i < m; i++) {
-            Uint8Vector buf = getRandomSeedAsUint8Vector(PrivateKey.PRIVATE_KEY_SIZE);
+            byte [] buf = getRandomSeed(PrivateKey.PRIVATE_KEY_SIZE);
 
-            PrivateKey sk = PrivateKey.fromByteVector(buf, true);
+            PrivateKey sk = PrivateKey.fromBytes(buf, true);
             sks.add(sk);
             pks.add(sk.getG1Element());
             sigs.add(sign(sk, vecHash));

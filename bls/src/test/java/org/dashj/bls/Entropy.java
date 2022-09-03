@@ -1,5 +1,7 @@
 package org.dashj.bls;
 
+import org.dashj.bls.Utils.Util;
+
 import java.security.SecureRandom;
 
 public class Entropy {

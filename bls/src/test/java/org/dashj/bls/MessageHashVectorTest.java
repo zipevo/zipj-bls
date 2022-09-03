@@ -11,7 +11,7 @@ public class MessageHashVectorTest extends BaseTest {
 
     @Test
     public void mainTest() {
-        MessageHashVector bav = new MessageHashVector();
+        /*Uint8VectorVector bav = new Uint8VectorVector();
 
         bav.reserve(3);
 
@@ -42,6 +42,6 @@ public class MessageHashVectorTest extends BaseTest {
         bav.push_back(ba2);
         bav.push_back(ba3);
 
-        bav.delete();
+        bav.delete();*/
     }
 }
