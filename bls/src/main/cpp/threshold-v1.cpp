@@ -6,7 +6,7 @@ namespace bls {
         std::vector<bls::Bytes> idsVec;
         idsVec.reserve(ids.size());
         for (size_t i = 0; i < ids.size(); i++) {
-            idsVec.emplace_back(ids[i].begin());
+            idsVec.emplace_back(ids[i]);
         }
         return Threshold::PrivateKeyRecover(sks, idsVec);
     }
