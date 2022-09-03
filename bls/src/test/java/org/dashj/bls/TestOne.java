@@ -1,8 +1,5 @@
-package org.dashj.bls.v1;
+package org.dashj.bls;
 
-import com.google.common.base.Preconditions;
-import org.dashj.bls.BaseTest;
-import org.dashj.bls.JNI;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

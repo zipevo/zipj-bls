@@ -1,4 +1,4 @@
-package org.dashj.bls.v1;
+package org.dashj.bls;
 
 import org.dashj.bls.BaseTest;
 import org.junit.Test;

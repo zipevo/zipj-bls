@@ -1,6 +1,5 @@
-package org.dashj.bls.v1;
+package org.dashj.bls;
 
-import org.dashj.bls.BaseTest;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,8 +13,8 @@ import static org.dashj.bls.v1.DASHJBLS.sign;
 import static org.dashj.bls.v1.DASHJBLS.signatureRecover;
 import static org.dashj.bls.v1.DASHJBLS.signatureShare;
 import static org.dashj.bls.v1.DASHJBLS.verify;
-import static org.dashj.bls.v1.Entropy.getRandomSeed;
-import static org.dashj.bls.v1.Entropy.getRandomSeedAsUint8Vector;
+import static org.dashj.bls.Entropy.getRandomSeed;
+import static org.dashj.bls.Entropy.getRandomSeedAsUint8Vector;
 import static org.junit.Assert.assertTrue;
 
 public class ThresholdTest extends BaseTest {

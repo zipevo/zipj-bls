@@ -1,12 +1,11 @@
-package org.dashj.bls.v1;
+package org.dashj.bls;
 
 import com.google.common.collect.Lists;
-import org.dashj.bls.BaseTest;
 import org.junit.Test;
 
 import java.util.List;
 
-import static org.dashj.bls.v1.Util.bytes;
+import static org.dashj.bls.Util.bytes;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;

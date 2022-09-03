@@ -1,4 +1,4 @@
-package org.dashj.bls.v1;
+package org.dashj.bls;
 
 import com.google.common.collect.Lists;
 import com.google.common.io.BaseEncoding;

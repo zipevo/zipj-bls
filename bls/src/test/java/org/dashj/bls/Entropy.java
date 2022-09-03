@@ -1,4 +1,4 @@
-package org.dashj.bls.v1;
+package org.dashj.bls;
 
 import java.security.SecureRandom;
 
