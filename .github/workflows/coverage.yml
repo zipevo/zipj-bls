@@ -21,6 +21,7 @@ jobs:
       - name: Run coverage
         run: |
           git submodule update --init --recursive
+          git apply catch_changes.patch
           mvn clean package -DskipTests -Dmaven.javadoc.skip=true
           mvn test -Pno-build-bls
           curl -Os https://uploader.codecov.io/latest/linux/codecov
