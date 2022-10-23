@@ -72,18 +72,18 @@ public class ThresholdTest extends BaseTest {
         G1ElementVector rpks = new G1ElementVector();
         G2ElementVector rsigs = new G2ElementVector();
         ByteVectorList rids = new ByteVectorList();
-        for (int i = 0; i < 2; i++) {
+        /*for (int i = 0; i < 2; i++) {
             rsks.add(skShares.get(i));
             rpks.add(pkShares.get(i));
             rsigs.add(sigShares.get(i));
             rids.add(new Uint8Vector(Util.byteArrayToShortArray(ids.get(i))));
-        }
+
             PrivateKey recSk = privateKeyRecover(rsks, rids);
             G1Element recPk = publicKeyRecover(rpks, rids);
             G2Element recSig = signatureRecover(rsigs, rids);
-        assertObjectNotEquals(recSk, sks.get(0));
-        assertObjectNotEquals(recPk, pks.get(0));
-        assertObjectNotEquals(recSig, sig);
+            assertObjectNotEquals(recSk, sks.get(0));
+            assertObjectNotEquals(recPk, pks.get(0));
+            assertObjectNotEquals(recSig, sig);
 
             rsks.add(skShares.get(2));
             rpks.add(pkShares.get(2));
@@ -95,5 +95,6 @@ public class ThresholdTest extends BaseTest {
             assertTrue(objectEquals(recSk, sks.get(0)));
             assertTrue(objectEquals(recPk, pks.get(0)));
             assertTrue(objectEquals(recSig, sig));
+        }*/
     }
 }

@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class TestVectors extends BaseTest {
+public class TestVectorsTest extends BaseTest {
     @Test
     public void basicTestVectors() {
         byte [] seed1 = new byte [32];
@@ -117,7 +117,6 @@ public class TestVectors extends BaseTest {
         G2Element aggSigR = new AugSchemeMPL().aggregate(sig3_4_5);
 
         G2Element aggSig = new AugSchemeMPL().aggregate(new G2ElementVector(new G2Element[]{aggSigL, aggSigR, sig6}));
-
 
         assertTrue(new AugSchemeMPL().aggregateVerify(
                 new G1ElementVector(new G1Element[]{pk1, pk2, pk2, pk1, pk1, pk1}),

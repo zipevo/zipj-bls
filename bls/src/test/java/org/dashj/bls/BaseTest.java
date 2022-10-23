@@ -35,6 +35,14 @@ public class BaseTest {
         assertTrue(DASHJBLS.objectEquals(a, b));
     }
 
+    static void assertObjectEquals(ExtendedPublicKey a, ExtendedPublicKey b) {
+        assertTrue(DASHJBLS.objectEquals(a, b));
+    }
+
+    static void assertObjectEquals(ExtendedPrivateKey a, ExtendedPrivateKey b) {
+        assertTrue(DASHJBLS.objectEquals(a, b));
+    }
+
     static void assertObjectNotEquals(G1Element a, G1Element b) {
         assertFalse(DASHJBLS.objectEquals(a, b));
     }

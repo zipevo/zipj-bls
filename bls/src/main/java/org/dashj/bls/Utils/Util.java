@@ -2,8 +2,16 @@ package org.dashj.bls.Utils;
 
 import com.google.common.collect.Lists;
 import com.google.common.io.BaseEncoding;
+import org.dashj.bls.G1Element;
+import org.dashj.bls.G1ElementVector;
+import org.dashj.bls.G2Element;
+import org.dashj.bls.G2ElementVector;
+import org.dashj.bls.PrivateKey;
+import org.dashj.bls.PrivateKeyVector;
 import org.dashj.bls.Uint8Vector;
 import org.dashj.bls.Uint8VectorVector;
+
+import java.util.Arrays;
 
 public class Util {
     public static final BaseEncoding HEX = BaseEncoding.base16().lowerCase();
@@ -75,5 +83,31 @@ public class Util {
             builder.append(String.format("%02x", (byte) (aByte & 0xff)));
         }
         return builder.toString();
+    }
+
+    public static Uint8VectorVector makeUintVectorVector(byte []... byteArrays) {
+        Uint8VectorVector vec = new Uint8VectorVector();
+        for (byte [] byteArray: byteArrays) {
+            vec.add(new Uint8Vector(byteArrayToShortArray(byteArray)));
+        }
+        return vec;
+    }
+
+    public static G1ElementVector makeG1ElementVector(G1Element... pks) {
+        G1ElementVector vec = new G1ElementVector();
+        vec.addAll(Arrays.asList(pks));
+        return vec;
+    }
+
+    public static G2ElementVector makeG2ElementVector(G2Element... sigs) {
+        G2ElementVector vec = new G2ElementVector();
+        vec.addAll(Arrays.asList(sigs));
+        return vec;
+    }
+
+    public static PrivateKeyVector makePrivateKeyVector(PrivateKey... pks) {
+        PrivateKeyVector vec = new PrivateKeyVector();
+        vec.addAll(Arrays.asList(pks));
+        return vec;
     }
 }

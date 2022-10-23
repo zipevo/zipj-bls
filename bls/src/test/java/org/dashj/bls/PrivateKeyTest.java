@@ -104,29 +104,17 @@ public class PrivateKeyTest extends BaseTest {
     }
 
     @Test
-    public void keydataChecks() {
+    public void serializedOrNot() {
         PrivateKey pk1 = PrivateKey.randomPrivateKey();
-        G1Element g1 = pk1.getG1Element();
-        G2Element g2 = pk1.getG2Element();
-        PrivateKey pk2 = new PrivateKey(pk1);
-        pk1 = new PrivateKey();
-        final PrivateKey emptyPk1 = pk1;
-        /*assertThrows(IllegalArgumentException.class, () -> new PrivateKey(emptyPk1));
-        assertTrue_THROWS(pk1 = pk2);
-        assertTrue_THROWS(pk1.getG1Element());
-        assertTrue_THROWS(pk1.getG2Element());
-        assertTrue_THROWS(g1 * pk1);
-        assertTrue_THROWS(pk1 * g1);
-        assertTrue_THROWS(g2 * pk1);
-        assertTrue_THROWS(pk1 * g2);
-        assertTrue_THROWS(pk1.getG2Power(g2));
-        assertTrue_THROWS(PrivateKey.Aggregate({pk1, pk2}));
-        assertTrue_THROWS(pk1.isZero());
-        assertTrue_THROWS(pk1 == pk2);
-        assertTrue_THROWS(pk1 != pk2);
-        assertTrue_THROWS(pk1.Serialize(buffer));
-        assertTrue_THROWS(pk1.Serialize());
-        assertTrue_THROWS(pk1.SignG2(buffer, sizeof(buffer), buffer, sizeof(buffer)));*/
+        byte [] serializedPrivateLegacy = pk1.serialize(true);
+        byte [] serializedPrivate = pk1.serialize(false);
+
+        G1Element g1Element = pk1.getG1Element();
+        byte [] serializedPublicLegacy = g1Element.serialize(true);
+        byte [] serializedPublic = g1Element.serialize(false);
+
+        System.out.println("Private legacy: " + Util.hexStr(serializedPrivateLegacy) + "\n        new:    " + Util.hexStr(serializedPrivate));
+        System.out.println("G1Element legacy: " + Util.hexStr(serializedPublicLegacy) + "\n          new:    " + Util.hexStr(serializedPublic));
     }
 }
 
