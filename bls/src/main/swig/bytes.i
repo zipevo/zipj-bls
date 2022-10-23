@@ -19,6 +19,8 @@ namespace bls {
 
 class Bytes;
 
+%feature("valuewrapper") Bytes;
+
 // Bytes
 %typemap(jni) Bytes "jbyteArray"
 %typemap(jtype) Bytes "byte[]"
@@ -28,16 +30,16 @@ class Bytes;
 %typemap(in) Bytes
 %{
     Bytes $1_bytesObject((const uint8_t *)jenv->GetByteArrayElements($input, 0), jenv->GetArrayLength($input));
-    $1 = &$1_bytesObject;
+    $1 = $1_bytesObject;
 %}
 
 %typemap(argout) Bytes {
-    JCALL3(ReleaseByteArrayElements, jenv, $input, (jbyte *) $1->begin(), 0);
+    JCALL3(ReleaseByteArrayElements, jenv, $input, (jbyte *) $1.begin(), 0);
 }
 
 %typemap(out) Bytes {
     $result = JCALL1(NewByteArray, jenv, $1.size());
-   JCALL4(SetByteArrayRegion, jenv, $result, 0, (*$1).size(), (jbyte *) $1->begin());
+   JCALL4(SetByteArrayRegion, jenv, $result, 0, $1.size(), (jbyte *) $1.begin());
 }
 
 %typemap(javain) Bytes "$javainput"
