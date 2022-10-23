@@ -29,7 +29,6 @@ include_directories(${JNI_INCLUDE_DIRS}
 					${CMAKE_SOURCE_DIR}/src/main/
 					${CMAKE_SOURCE_DIR}/src/main/cpp
 					${CMAKE_SOURCE_DIR}/src/main/cpp/bls-signatures/src
-					${CMAKE_SOURCE_DIR}/src/main/cpp/bls-signatures/contrib/catch
 )
 
 # Specifies libraries CMake should link to your target library. You
@@ -46,8 +45,6 @@ target_link_libraries( # Specifies the target library.
 
         # Links the target library to the bls library
         bls-dash)
-#set(CMAKE_EXE_LINKER_FLAGS " -static")
-#target_link_libraries(dashjbls -static-libgcc -static-libstdc++)
-#find_package(Threads REQUIRED)
-#target_link_libraries(dashjbls Threads::Threads)
-add_subdirectory(src/main/cpp)
+
+# import the bls-signature project as is
+add_subdirectory(src/main/cpp/bls-signatures)
