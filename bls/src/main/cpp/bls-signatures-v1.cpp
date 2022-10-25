@@ -11614,7 +11614,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1veri
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregateVerify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   vector< vector< uint8_t > > *arg2 = 0 ;
@@ -11654,74 +11654,6 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggr
   {
     try {
       result = (bool)(arg1)->AggregateVerify((vector< vector< uint8_t > > const &)*arg2,(vector< vector< uint8_t > > const &)*arg3,(vector< uint8_t > const &)*arg4);
-    } catch(std::string x) {
-      {
-        SWIG_JavaException(jenv, SWIG_ValueError, x.c_str()); return 0; 
-      };
-    } catch(std::runtime_error x) {
-      {
-        SWIG_JavaException(jenv, SWIG_RuntimeError, x.what()); return 0; 
-      };
-    } catch(std::invalid_argument x) {
-      {
-        SWIG_JavaException(jenv, SWIG_ValueError, x.what()); return 0; 
-      };
-    } catch(std::length_error x) {
-      {
-        SWIG_JavaException(jenv, SWIG_ValueError, x.what()); return 0; 
-      };
-    } catch(std::logic_error x) {
-      {
-        SWIG_JavaException(jenv, SWIG_ValueError, x.what()); return 0; 
-      };
-    } catch(std::exception x) {
-      {
-        SWIG_JavaException(jenv, SWIG_SystemError, x.what()); return 0; 
-      };
-    } catch(...) {
-      {
-        SWIG_JavaException(jenv, SWIG_RuntimeError, "Unknown exception"); return 0; 
-      };
-    }
-  }
-  jresult = (jboolean)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
-  jboolean jresult = 0 ;
-  bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
-  vector< bls::G1Element > *arg2 = 0 ;
-  vector< vector< uint8_t > > *arg3 = 0 ;
-  bls::G2Element *arg4 = 0 ;
-  bool result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  (void)jarg2_;
-  (void)jarg3_;
-  (void)jarg4_;
-  arg1 = *(bls::LegacySchemeMPL **)&jarg1; 
-  arg2 = *(vector< bls::G1Element > **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "vector< bls::G1Element > const & reference is null");
-    return 0;
-  } 
-  arg3 = *(vector< vector< uint8_t > > **)&jarg3;
-  if (!arg3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "vector< vector< uint8_t > > const & reference is null");
-    return 0;
-  } 
-  arg4 = *(bls::G2Element **)&jarg4;
-  if (!arg4) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::G2Element const & reference is null");
-    return 0;
-  } 
-  {
-    try {
-      result = (bool)(arg1)->AggregateVerify((vector< bls::G1Element > const &)*arg2,(vector< vector< uint8_t > > const &)*arg3,(bls::G2Element const &)*arg4);
     } catch(std::string x) {
       {
         SWIG_JavaException(jenv, SWIG_ValueError, x.c_str()); return 0; 

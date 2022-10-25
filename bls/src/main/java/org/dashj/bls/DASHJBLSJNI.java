@@ -276,8 +276,7 @@ public class DASHJBLSJNI {
   public final static native byte[] LegacySchemeMPL_aggregate(long jarg1, LegacySchemeMPL jarg1_, long jarg2, Uint8VectorVector jarg2_);
   public final static native long LegacySchemeMPL_aggregateSecure(long jarg1, LegacySchemeMPL jarg1_, long jarg2, G1ElementVector jarg2_, long jarg3, G2ElementVector jarg3_, byte[] jarg4);
   public final static native boolean LegacySchemeMPL_verifySecure(long jarg1, LegacySchemeMPL jarg1_, long jarg2, G1ElementVector jarg2_, long jarg3, G2Element jarg3_, byte[] jarg4);
-  public final static native boolean LegacySchemeMPL_aggregateVerify__SWIG_0(long jarg1, LegacySchemeMPL jarg1_, long jarg2, Uint8VectorVector jarg2_, long jarg3, Uint8VectorVector jarg3_, byte[] jarg4);
-  public final static native boolean LegacySchemeMPL_aggregateVerify__SWIG_1(long jarg1, LegacySchemeMPL jarg1_, long jarg2, G1ElementVector jarg2_, long jarg3, Uint8VectorVector jarg3_, long jarg4, G2Element jarg4_);
+  public final static native boolean LegacySchemeMPL_aggregateVerify(long jarg1, LegacySchemeMPL jarg1_, long jarg2, Uint8VectorVector jarg2_, long jarg3, Uint8VectorVector jarg3_, byte[] jarg4);
   public final static native void delete_LegacySchemeMPL(long jarg1);
   public final static native long privateKeyShare(long jarg1, PrivateKeyVector jarg1_, byte[] jarg2);
   public final static native long publicKeyShare(long jarg1, G1ElementVector jarg1_, byte[] jarg2);

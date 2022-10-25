@@ -61,11 +61,7 @@ public class LegacySchemeMPL extends CoreMPL {
   }
 
   public boolean aggregateVerify(Uint8VectorVector pubkeys, Uint8VectorVector messages, byte[] signature) {
-    return DASHJBLSJNI.LegacySchemeMPL_aggregateVerify__SWIG_0(swigCPtr, this, Uint8VectorVector.getCPtr(pubkeys), pubkeys, Uint8VectorVector.getCPtr(messages), messages, signature);
-  }
-
-  public boolean aggregateVerify(G1ElementVector pubkeys, Uint8VectorVector messages, G2Element signature) {
-    return DASHJBLSJNI.LegacySchemeMPL_aggregateVerify__SWIG_1(swigCPtr, this, G1ElementVector.getCPtr(pubkeys), pubkeys, Uint8VectorVector.getCPtr(messages), messages, G2Element.getCPtr(signature), signature);
+    return DASHJBLSJNI.LegacySchemeMPL_aggregateVerify(swigCPtr, this, Uint8VectorVector.getCPtr(pubkeys), pubkeys, Uint8VectorVector.getCPtr(messages), messages, signature);
   }
 
 }
