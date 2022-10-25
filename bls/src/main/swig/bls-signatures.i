@@ -68,7 +68,7 @@ namespace bls {
                                                                                     const vector<vector<uint8_t>> &messages,
                                                                                     const vector<uint8_t> &signature) final;
   %extend LegacySchemeMPL {
-    bool AggregateVerify(const vector<G1Element> &pubkeys,
+    bool AggregateVerifySignature(const vector<G1Element> &pubkeys,
                            const vector<vector<uint8_t>> &messages,
                            const G2Element &signature) final {
         std::vector<bls::Bytes> messagesVec;
