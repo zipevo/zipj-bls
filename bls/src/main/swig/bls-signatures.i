@@ -61,7 +61,12 @@ namespace bls {
   %ignore Threshold::PublicKeyRecover(const std::vector<G1Element>& sks, const std::vector<Bytes>& ids);
   %ignore Threshold::SignatureRecover(const std::vector<G2Element>& sigs, const std::vector<Bytes>& ids);
 
-  %ignore LegacySchemeMPL::AggregateVerify(const vector<G1Element> &pubkeys, const vector<vector<uint8_t>> &messages, const G2Element &signature);
+  %rename ("$ignore", fullname=1) LegacySchemeMPL::AggregateVerify(const vector<G1Element> &pubkeys,
+                                                           const vector<vector<uint8_t>> &messages,
+                                                           const G2Element &signature) final ;
+  %rename ("$ignore", fullname=1) LegacySchemeMPL::AggregateVerify(const vector<vector<uint8_t>> &pubkeys,
+                                                                                    const vector<vector<uint8_t>> &messages,
+                                                                                    const vector<uint8_t> &signature) final;
   %extend LegacySchemeMPL {
     bool AggregateVerify(const vector<G1Element> &pubkeys,
                            const vector<vector<uint8_t>> &messages,
