@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ * <p>
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package org.dashj.bls;
 
 import org.dashj.bls.Utils.ByteVectorList;
@@ -13,12 +20,12 @@ import static org.junit.Assert.assertTrue;
 public class TestVectorsTest extends BaseTest {
     @Test
     public void basicTestVectors() {
-        byte [] seed1 = new byte [32];
-        Arrays.fill(seed1, (byte)0x00);  // All 0s
-        byte [] seed2 = new byte [32];
-        Arrays.fill(seed2, (byte)0x01);  // All 1s
-        byte [] message1 = new byte []{7, 8, 9};
-        byte [] message2 = new byte []{10, 11, 12};
+        byte[] seed1 = new byte[32];
+        Arrays.fill(seed1, (byte) 0x00);  // All 0s
+        byte[] seed2 = new byte[32];
+        Arrays.fill(seed2, (byte) 0x01);  // All 1s
+        byte[] message1 = new byte[]{7, 8, 9};
+        byte[] message2 = new byte[]{10, 11, 12};
 
         PrivateKey sk1 = new BasicSchemeMPL().keyGen(seed1);
         G1Element pk1 = sk1.getG1Element();
@@ -60,15 +67,15 @@ public class TestVectorsTest extends BaseTest {
                         "c2e7790aeb455e27beae91d64e077c70b5506dea3");
 
         assertTrue(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}),
-                new ByteVectorList(new byte [][]{message1, message2}), aggSig1));
+                new ByteVectorList(new byte[][]{message1, message2}), aggSig1));
         assertFalse(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}),
-                new ByteVectorList(new byte [][]{message1, message2}), sig1));
+                new ByteVectorList(new byte[][]{message1, message2}), sig1));
         assertFalse(new BasicSchemeMPL().verify(pk1, message1, sig2));
         assertFalse(new BasicSchemeMPL().verify(pk1, message2, sig1));
 
-        byte [] message3 = new byte []{1, 2, 3};
-        byte [] message4 = new byte []{1, 2, 3, 4};
-        byte [] message5 = new byte []{1, 2};
+        byte[] message3 = new byte[]{1, 2, 3};
+        byte[] message4 = new byte[]{1, 2, 3, 4};
+        byte[] message5 = new byte[]{1, 2};
 
         G2Element sig3 = new BasicSchemeMPL().sign(sk1, message3);
         G2Element sig4 = new BasicSchemeMPL().sign(sk1, message4);
@@ -77,7 +84,7 @@ public class TestVectorsTest extends BaseTest {
         G2Element aggSig2 = new BasicSchemeMPL().aggregate(new G2ElementVector(new G2Element[]{sig3, sig4, sig5}));
 
         assertTrue(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk1, pk2}),
-                new ByteVectorList(new byte [][]{message3, message4, message5}), aggSig2));
+                new ByteVectorList(new byte[][]{message3, message4, message5}), aggSig2));
         assertEquals(
                 Util.hexStr(aggSig2.serialize()),
                 "a0b1378d518bea4d1100adbc7bdbc4ff64f2c219ed6395cd36fe5d2aa44a4b8e710b607afd9" +
@@ -87,15 +94,15 @@ public class TestVectorsTest extends BaseTest {
 
     @Test
     public void augmentedTestVectors() {
-        byte [] message1 = new byte []{1, 2, 3, 40};
-        byte [] message2 = new byte []{5, 6, 70, (byte)201};
-        byte [] message3 = new byte []{9, 10, 11, 12, 13};
-        byte [] message4 = new byte []{15, 63, (byte)244, 92, 0, 1};
+        byte[] message1 = new byte[]{1, 2, 3, 40};
+        byte[] message2 = new byte[]{5, 6, 70, (byte) 201};
+        byte[] message3 = new byte[]{9, 10, 11, 12, 13};
+        byte[] message4 = new byte[]{15, 63, (byte) 244, 92, 0, 1};
 
-        byte [] seed1 = new byte [32];  // All 2s
-        Arrays.fill(seed1, (byte)0x02);
-        byte [] seed2 = new byte [32];  // All 3s
-        Arrays.fill(seed2, (byte)0x03);
+        byte[] seed1 = new byte[32];  // All 2s
+        Arrays.fill(seed1, (byte) 0x02);
+        byte[] seed2 = new byte[32];  // All 3s
+        Arrays.fill(seed2, (byte) 0x03);
 
         PrivateKey sk1 = new AugSchemeMPL().keyGen(seed1);
         PrivateKey sk2 = new AugSchemeMPL().keyGen(seed2);
@@ -120,7 +127,7 @@ public class TestVectorsTest extends BaseTest {
 
         assertTrue(new AugSchemeMPL().aggregateVerify(
                 new G1ElementVector(new G1Element[]{pk1, pk2, pk2, pk1, pk1, pk1}),
-                new ByteVectorList(new byte [][]{
+                new ByteVectorList(new byte[][]{
                         message1, message2, message1, message3, message1, message4
                 }), aggSig));
 
@@ -134,7 +141,7 @@ public class TestVectorsTest extends BaseTest {
     public void popTestVectors() {
         byte[] message1 = {1, 2, 3, 40, 50};
 
-        byte [] seed1 = new byte [32];
+        byte[] seed1 = new byte[32];
         Arrays.fill(seed1, (byte) 0x4);  // All 4s
 
         PrivateKey sk1 = new PopSchemeMPL().keyGen(seed1);

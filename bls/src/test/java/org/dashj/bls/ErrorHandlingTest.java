@@ -1,6 +1,12 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ * <p>
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package org.dashj.bls;
 
-import org.dashj.bls.Utils.Util;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -13,18 +19,19 @@ public class ErrorHandlingTest extends BaseTest {
     @Test
     public void shouldThrowOnBadPrivateKey() {
         byte[] seed = new byte[32];
-        Arrays.fill( seed, (byte) 0x10);
+        Arrays.fill(seed, (byte) 0x10);
         PrivateKey sk1 = new BasicSchemeMPL().keyGen(seed);
-        byte [] skData = new byte[G2Element.SIZE];
+        byte[] skData = new byte[G2Element.SIZE];
         sk1.serialize(skData);
-        skData[0] = (byte)255;
-        assertThrows(IllegalArgumentException.class,() -> PrivateKey.fromBytes(Util.bytes(skData, PrivateKey.PRIVATE_KEY_SIZE)));
+        skData[0] = (byte) 255;
+        assertThrows(IllegalArgumentException.class, () -> PrivateKey.fromBytes(skData));
     }
 
-    @Test public void shouldThrowOnBadPublicKey() {
+    @Test
+    public void shouldThrowOnBadPublicKey() {
         byte[] buf = new byte[G1Element.SIZE];
         for (int i = 0; i < 0xFF; i++) {
-            buf[0] = (byte)i;
+            buf[0] = (byte) i;
             if (i == 0xc0) { // Infinity prefix shouldn't throw here as we have only zero values
                 G1Element.fromBytes(buf);
             } else {
@@ -33,12 +40,12 @@ public class ErrorHandlingTest extends BaseTest {
         }
     }
 
-    @Test public void shouldThrowOnBadG2Element()
-    {
+    @Test
+    public void shouldThrowOnBadG2Element() {
         byte[] buf = new byte[G2Element.SIZE];
 
         for (int i = 0; i < 0xFF; i++) {
-            buf[0] = (byte)i;
+            buf[0] = (byte) i;
             if (i == 0xc0) { // Infinity prefix shouldn't throw here as we have only zero values
                 G2Element.fromBytes(buf);
             } else {

@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package org.dashj.bls;
 
+import org.dashj.bls.Utils.ByteVectorList;
 import org.dashj.bls.Utils.Util;
 import org.junit.Test;
 
@@ -45,8 +53,8 @@ public class AggregateTest extends BaseTest {
         assertTrue(new BasicSchemeMPL().verify(aggPubKey, message, aggSig2));
 
         // Verify aggregate with both keys (Fails since not distinct)
-        assertFalse(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), Util.makeUintVectorVector(message, message), aggSig));
-        assertFalse(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), Util.makeUintVectorVector(message, message), aggSig2));
+        assertFalse(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), new ByteVectorList(message, message), aggSig));
+        assertFalse(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), new ByteVectorList(message, message), aggSig2));
 
         // Try the same with distinct message, and same sk
         byte [] message2 = new byte[]{(byte)200, 29, 54, 8, 9, 29, (byte)155, 55};
@@ -70,7 +78,7 @@ public class AggregateTest extends BaseTest {
         // Cannot verify with aggPubKey (since we have multiple messages)
         assertTrue(new BasicSchemeMPL().aggregateVerify(
                 new G1ElementVector(new G1Element[]{aggPubKey, pk2}),
-                Util.makeUintVectorVector(message, message2),
+                new ByteVectorList(message, message2),
                 aggSigFinal)
         );
     }

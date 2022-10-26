@@ -1,15 +1,18 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ * <p>
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package org.dashj.bls;
 
 import org.dashj.bls.Utils.Util;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import static org.dashj.bls.Utils.Util.bytes;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
@@ -17,7 +20,6 @@ import static org.junit.Assert.assertTrue;
 
 public class PrivateKeyTest extends BaseTest {
     byte[] buffer;
-    private static Logger log = LoggerFactory.getLogger(PrivateKeyTest.class);
 
     @Before
     public void beforeEach() {
@@ -75,17 +77,20 @@ public class PrivateKeyTest extends BaseTest {
 
     @Test
     public void de_serialization() {
-        log.info("lol");
         PrivateKey pk1 = PrivateKey.randomPrivateKey();
         pk1.serialize(buffer);
         assertArrayEquals(buffer, pk1.serialize());
-        PrivateKey pk2 = PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), true);
+        PrivateKey pk2 = PrivateKey.fromBytes(buffer, true);
         assertObjectEquals(pk1, pk2);
-        assertThrows(IllegalArgumentException.class, () -> PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE - 1), true));
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE + 1), true));
-        PrivateKey pk3 = PrivateKey.fromBytes(bytes(buffer, PrivateKey.PRIVATE_KEY_SIZE), true);
+        byte[] shortBuffer = new byte[buffer.length - 1];
+        System.arraycopy(shortBuffer, 0, buffer, 0, buffer.length - 1);
+        byte[] longBuffer = new byte[buffer.length + 1];
+        System.arraycopy(longBuffer, 0, buffer, 0, buffer.length);
+        assertThrows(IllegalArgumentException.class, () -> PrivateKey.fromBytes(shortBuffer, true));
+        assertThrows(IllegalArgumentException.class, () -> PrivateKey.fromBytes(longBuffer, true));
+        PrivateKey pk3 = PrivateKey.fromBytes(buffer, true);
 
-        byte [] bytes_ = pk3.serialize();
+        byte[] bytes_ = pk3.serialize();
         PrivateKey.fromBytes(bytes_);
     }
 
@@ -94,27 +99,24 @@ public class PrivateKeyTest extends BaseTest {
         byte[] aliceSeed = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         PrivateKey pk1 = PrivateKey.fromSeedBIP32(aliceSeed);
         assertTrue(pk1.hasKeyData());
-        byte [] privateKey = pk1.serialize(true);
-        byte [] knownPrivateKey = Util.hexToBytes("46891c2cec49593c81921e473db7480029e0fc1eb933c6b93d81f5370eb19fbd");
+        byte[] privateKey = pk1.serialize(true);
+        byte[] knownPrivateKey = Util.hexToBytes("46891c2cec49593c81921e473db7480029e0fc1eb933c6b93d81f5370eb19fbd");
         assertArrayEquals(privateKey, knownPrivateKey);
         G1Element pubKey1 = pk1.getG1Element();
-        byte [] pubKey1Bytes = pubKey1.serialize(true);
-        byte [] knownPublicKey = Util.hexToBytes("1790635de8740e9a6a6b15fb6b72f3a16afa0973d971979b6ba54761d6e2502c50db76f4d26143f05459a42cfd520d44");
+        byte[] pubKey1Bytes = pubKey1.serialize(true);
+        byte[] knownPublicKey = Util.hexToBytes("1790635de8740e9a6a6b15fb6b72f3a16afa0973d971979b6ba54761d6e2502c50db76f4d26143f05459a42cfd520d44");
         assertArrayEquals(pubKey1Bytes, knownPublicKey);
     }
 
     @Test
     public void serializedOrNot() {
         PrivateKey pk1 = PrivateKey.randomPrivateKey();
-        byte [] serializedPrivateLegacy = pk1.serialize(true);
-        byte [] serializedPrivate = pk1.serialize(false);
+        byte[] serializedPrivateLegacy = pk1.serialize(true);
+        byte[] serializedPrivate = pk1.serialize(false);
 
         G1Element g1Element = pk1.getG1Element();
-        byte [] serializedPublicLegacy = g1Element.serialize(true);
-        byte [] serializedPublic = g1Element.serialize(false);
-
-        System.out.println("Private legacy: " + Util.hexStr(serializedPrivateLegacy) + "\n        new:    " + Util.hexStr(serializedPrivate));
-        System.out.println("G1Element legacy: " + Util.hexStr(serializedPublicLegacy) + "\n          new:    " + Util.hexStr(serializedPublic));
+        byte[] serializedPublicLegacy = g1Element.serialize(true);
+        byte[] serializedPublic = g1Element.serialize(false);
     }
 }
 

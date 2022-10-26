@@ -1,5 +1,16 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 package org.dashj.bls;
 
+import org.dashj.bls.Utils.ByteVector;
+import org.dashj.bls.Utils.ByteVectorList;
+import org.dashj.bls.Utils.G1ElementList;
+import org.dashj.bls.Utils.G2ElementList;
+import org.dashj.bls.Utils.PrivateKeyList;
 import org.dashj.bls.Utils.Util;
 import org.junit.Test;
 
@@ -14,13 +25,13 @@ public class AdvancedTest extends BaseTest {
         G1Element pk1 = sk1.getG1Element();
         G2Element aggSig = new AugSchemeMPL().sign(sk1, message1);
         G1ElementVector pks = new G1ElementVector(new G1Element[]{pk1});
-        Uint8VectorVector ms = Util.makeUintVectorVector(message1);
+        Uint8VectorVector ms = new ByteVectorList(message1);
 
         for (int i = 0; i < 10; i++) {
             PrivateKey sk = new AugSchemeMPL().keyGen(Entropy.getRandomSeed(32));
             G1Element pk = sk.getG1Element();
             pks.add(pk);
-            ms.add(new Uint8Vector(Util.byteArrayToShortArray(message1)));
+            ms.add(new ByteVector(message1));
             G2Element sig = new AugSchemeMPL().sign(sk, message1);
             aggSig = new AugSchemeMPL().aggregate(new G2ElementVector(new G2Element[]{aggSig, sig}));
         }
@@ -47,7 +58,7 @@ public class AdvancedTest extends BaseTest {
 
         G2ElementVector sigsL = new G2ElementVector(new G2Element[]{sig1, sig2});
         G1ElementVector pksL = new G1ElementVector(new G1Element[]{pk1, pk2});
-        Uint8VectorVector messagesL = Util.makeUintVectorVector(message1, message2);
+        Uint8VectorVector messagesL = new ByteVectorList(message1, message2);
         G2Element aggSigL = new AugSchemeMPL().aggregate(sigsL);
 
         G2ElementVector sigsR = new G2ElementVector(new G2Element[]{sig3, sig4});
@@ -58,7 +69,7 @@ public class AdvancedTest extends BaseTest {
         G2Element aggSig = new AugSchemeMPL().aggregate(sigs);
 
         G1ElementVector allPks = new G1ElementVector(new G1Element[]{pk1, pk2, pk2, pk1});
-        Uint8VectorVector allMessages = Util.makeUintVectorVector(message1, message2, message3, message4);
+        Uint8VectorVector allMessages = new ByteVectorList(message1, message2, message3, message4);
         assertTrue(new AugSchemeMPL().aggregateVerify(allPks, allMessages, aggSig));
     }
     
@@ -111,9 +122,9 @@ public class AdvancedTest extends BaseTest {
         G2Element sig2 = new AugSchemeMPL().sign(sk2, message2);
 
         // Signatures can be noninteractively combined by anyone
-        G2Element aggSig = new AugSchemeMPL().aggregate(Util.makeG2ElementVector(sig1, sig2));
+        G2Element aggSig = new AugSchemeMPL().aggregate(new G2ElementList(sig1, sig2));
 
-        assertTrue(new AugSchemeMPL().aggregateVerify(Util.makeG1ElementVector(pk1, pk2), Util.makeUintVectorVector(message, message2), aggSig));
+        assertTrue(new AugSchemeMPL().aggregateVerify(new G1ElementList(pk1, pk2), new ByteVectorList(message, message2), aggSig));
 
         seed[0] = 3;
         PrivateKey sk3 = new AugSchemeMPL().keyGen(seed);
@@ -123,11 +134,11 @@ public class AdvancedTest extends BaseTest {
 
 
         // Arbitrary trees of aggregates
-        G2Element aggSigFinal = new AugSchemeMPL().aggregate(Util.makeG2ElementVector(aggSig, sig3));
+        G2Element aggSigFinal = new AugSchemeMPL().aggregate(new G2ElementList(aggSig, sig3));
 
-        assertTrue(new AugSchemeMPL().aggregateVerify(Util.makeG1ElementVector(pk1, pk2, pk3), Util.makeUintVectorVector(message, message2, message3), aggSigFinal));
+        assertTrue(new AugSchemeMPL().aggregateVerify(new G1ElementList(pk1, pk2, pk3), new ByteVectorList(message, message2, message3), aggSigFinal));
 
-        // If the same message is signed, you can use Proof of Posession (PopScheme) for efficiency
+        // If the same message is signed, you can use Proof of Possession (PopScheme) for efficiency
         // A proof of possession MUST be passed around with the PK to ensure security.
 
         G2Element popSig1 = new PopSchemeMPL().sign(sk1, message);
@@ -140,16 +151,16 @@ public class AdvancedTest extends BaseTest {
         assertTrue(new PopSchemeMPL().popVerify(pk1, pop1));
         assertTrue(new PopSchemeMPL().popVerify(pk2, pop2));
         assertTrue(new PopSchemeMPL().popVerify(pk3, pop3));
-        G2Element popSigAgg = new PopSchemeMPL().aggregate(Util.makeG2ElementVector(popSig1, popSig2, popSig3));
+        G2Element popSigAgg = new PopSchemeMPL().aggregate(new G2ElementList(popSig1, popSig2, popSig3));
 
-        assertTrue(new PopSchemeMPL().fastAggregateVerify(Util.makeG1ElementVector(pk1, pk2, pk3), message, popSigAgg));
+        assertTrue(new PopSchemeMPL().fastAggregateVerify(new G1ElementList(pk1, pk2, pk3), message, popSigAgg));
 
         // Aggregate public key, indistinguishable from a single public key
         G1Element popAggPk = DASHJBLS.add(DASHJBLS.add(pk1, pk2), pk3);
         assertTrue(new PopSchemeMPL().verify(popAggPk, message, popSigAgg));
 
         // Aggregate private keys
-        PrivateKey aggSk = PrivateKey.aggregate(Util.makePrivateKeyVector(sk1, sk2, sk3));
+        PrivateKey aggSk = PrivateKey.aggregate(new PrivateKeyList(sk1, sk2, sk3));
         assertObjectEquals(new PopSchemeMPL().sign(aggSk, message), popSigAgg);
 
 

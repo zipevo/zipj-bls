@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ * <p>
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package org.dashj.bls;
 
 import org.dashj.bls.Utils.Util;
@@ -5,7 +12,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
 
 public class LegacyHDKeysTest extends BaseTest {
     @Test
@@ -64,8 +70,9 @@ public class LegacyHDKeysTest extends BaseTest {
         //TODO: determine why this fails
         //assertTrue(new LegacySchemeMPL().verify(sk3.getG1Element(), seed, sig));
 
-        G2Element sigB = new BasicSchemeMPL().sign(sk3, seed);
-        assertTrue(new BasicSchemeMPL().verify(sk3.getG1Element(), seed, sigB));
+        // This part will pass, though we are using a legacy scheme above
+        // G2Element sigB = new BasicSchemeMPL().sign(sk3, seed);
+        // assertTrue(new BasicSchemeMPL().verify(sk3.getG1Element(), seed, sigB));
     }
 
     @Test
@@ -134,6 +141,5 @@ public class LegacyHDKeysTest extends BaseTest {
         sk3.getExtendedPublicKey().serialize(buffer2, true);
         pk4.serialize(buffer3, true);
         assertArrayEquals(buffer2, buffer3);
-        //REQUIRE(std.memcmp(buffer2, buffer3, ExtendedPublicKey.SIZE) == 0);
     }
 }

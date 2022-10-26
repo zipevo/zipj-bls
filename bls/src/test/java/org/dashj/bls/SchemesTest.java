@@ -1,14 +1,29 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ * <p>
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package org.dashj.bls;
 
 import com.google.common.collect.Lists;
 import org.dashj.bls.Utils.ByteVectorList;
+import org.dashj.bls.Utils.G1ElementList;
+import org.dashj.bls.Utils.G2ElementList;
 import org.dashj.bls.Utils.Util;
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.dashj.bls.Utils.Util.bytes;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -23,7 +38,7 @@ public class SchemesTest extends BaseTest {
         Arrays.fill(seed2, (byte) 0x05);
         byte[] msg1 = {7, 8, 9};
         byte[] msg2 = {10, 11, 12};
-        ByteVectorList msgs = new ByteVectorList(new byte[][]{msg1, msg2});
+        ByteVectorList msgs = new ByteVectorList(msg1, msg2);
 
         PrivateKey sk1 = new BasicSchemeMPL().keyGen(seed1);
         G1Element pk1 = new BasicSchemeMPL().skToG1(sk1);
@@ -50,10 +65,10 @@ public class SchemesTest extends BaseTest {
         assertFalse(new BasicSchemeMPL().verify(pk2, msg1, sig1));
         assertFalse(new BasicSchemeMPL().verify(pk2v, msg1, sig1v));
 
-        G2Element aggsig = new BasicSchemeMPL().aggregate(new G2ElementVector(new G2Element[]{sig1, sig2}));
-        byte[] aggsigv = new BasicSchemeMPL().aggregate(new ByteVectorList(new byte[][]{sig1v, sig2v}));
-        assertTrue(new BasicSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), msgs, aggsig));
-        assertTrue(new BasicSchemeMPL().aggregateVerify(new ByteVectorList(new byte[][]{pk1v, pk2v}), msgs, aggsigv));
+        G2Element aggsig = new BasicSchemeMPL().aggregate(new G2ElementList(sig1, sig2));
+        byte[] aggsigv = new BasicSchemeMPL().aggregate(new ByteVectorList(sig1v, sig2v));
+        assertTrue(new BasicSchemeMPL().aggregateVerify(new G1ElementList(pk1, pk2), msgs, aggsig));
+        assertTrue(new BasicSchemeMPL().aggregateVerify(new ByteVectorList(pk1v, pk2v), msgs, aggsigv));
     }
 
     @Test
@@ -64,7 +79,7 @@ public class SchemesTest extends BaseTest {
         Arrays.fill(seed2, (byte) 0x05);
         byte[] msg1 = {7, 8, 9};
         byte[] msg2 = {10, 11, 12};
-        ByteVectorList msgs = new ByteVectorList(new byte[][]{msg1, msg2});
+        ByteVectorList msgs = new ByteVectorList(msg1, msg2);
 
         PrivateKey sk1 = new AugSchemeMPL().keyGen(seed1);
         G1Element pk1 = new AugSchemeMPL().skToG1(sk1);
@@ -91,10 +106,10 @@ public class SchemesTest extends BaseTest {
         assertFalse(new AugSchemeMPL().verify(pk2, msg1, sig1));
         assertFalse(new AugSchemeMPL().verify(pk2v, msg1, sig1v));
 
-        G2Element aggsig = new AugSchemeMPL().aggregate(new G2ElementVector(new G2Element[]{sig1, sig2}));
-        byte[] aggsigv = new AugSchemeMPL().aggregate(new ByteVectorList(new byte[][]{sig1v, sig2v}));
-        assertTrue(new AugSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), msgs, aggsig));
-        assertTrue(new AugSchemeMPL().aggregateVerify(new ByteVectorList(new byte[][]{pk1v, pk2v}), msgs, aggsigv));
+        G2Element aggsig = new AugSchemeMPL().aggregate(new G2ElementList(sig1, sig2));
+        byte[] aggsigv = new AugSchemeMPL().aggregate(new ByteVectorList(sig1v, sig2v));
+        assertTrue(new AugSchemeMPL().aggregateVerify(new G1ElementList(pk1, pk2), msgs, aggsig));
+        assertTrue(new AugSchemeMPL().aggregateVerify(new ByteVectorList(pk1v, pk2v), msgs, aggsigv));
     }
 
     @Test
@@ -105,7 +120,7 @@ public class SchemesTest extends BaseTest {
         Arrays.fill(seed2, (byte) 0x05);
         byte[] msg1 = {7, 8, 9};
         byte[] msg2 = {10, 11, 12};
-        ByteVectorList msgs = new ByteVectorList(new byte[][]{msg1, msg2});
+        ByteVectorList msgs = new ByteVectorList(msg1, msg2);
 
         PrivateKey sk1 = new PopSchemeMPL().keyGen(seed1);
         G1Element pk1 = new PopSchemeMPL().skToG1(sk1);
@@ -132,10 +147,10 @@ public class SchemesTest extends BaseTest {
         assertFalse(new PopSchemeMPL().verify(pk2, msg1, sig1));
         assertFalse(new PopSchemeMPL().verify(pk2v, msg1, sig1v));
 
-        G2Element aggsig = new PopSchemeMPL().aggregate(new G2ElementVector(new G2Element[]{sig1, sig2}));
-        byte[] aggsigv = new PopSchemeMPL().aggregate(new ByteVectorList(new byte[][]{sig1v, sig2v}));
-        assertTrue(new PopSchemeMPL().aggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), msgs, aggsig));
-        assertTrue(new PopSchemeMPL().aggregateVerify(new ByteVectorList(new byte[][]{pk1v, pk2v}), msgs, aggsigv));
+        G2Element aggsig = new PopSchemeMPL().aggregate(new G2ElementList(sig1, sig2));
+        byte[] aggsigv = new PopSchemeMPL().aggregate(new ByteVectorList(sig1v, sig2v));
+        assertTrue(new PopSchemeMPL().aggregateVerify(new G1ElementList(pk1, pk2), msgs, aggsig));
+        assertTrue(new PopSchemeMPL().aggregateVerify(new ByteVectorList(pk1v, pk2v), msgs, aggsigv));
 
         // PopVerify
         G2Element proof1 = new PopSchemeMPL().popProve(sk1);
@@ -147,11 +162,11 @@ public class SchemesTest extends BaseTest {
         // We want sk2 to sign the same message
         G2Element sig2_same = new PopSchemeMPL().sign(sk2, msg1);
         byte[] sig2v_same = new PopSchemeMPL().sign(sk2, msg1).serialize();
-        G2Element aggsig_same = new PopSchemeMPL().aggregate(new G2ElementVector(new G2Element[]{sig1, sig2_same}));
-        byte[] aggsigv_same = new PopSchemeMPL().aggregate(new ByteVectorList(new byte[][]{sig1v, sig2v_same }));
+        G2Element aggsig_same = new PopSchemeMPL().aggregate(new G2ElementList(sig1, sig2_same));
+        byte[] aggsigv_same = new PopSchemeMPL().aggregate(new ByteVectorList(sig1v, sig2v_same));
         assertTrue(
-                new PopSchemeMPL().fastAggregateVerify(new G1ElementVector(new G1Element[]{pk1, pk2}), msg1, aggsig_same));
-        assertTrue(new PopSchemeMPL().fastAggregateVerify(new ByteVectorList(new byte[][]{pk1v, pk2v}), msg1, aggsigv_same));
+                new PopSchemeMPL().fastAggregateVerify(new G1ElementList(pk1, pk2), msg1, aggsig_same));
+        assertTrue(new PopSchemeMPL().fastAggregateVerify(new ByteVectorList(pk1v, pk2v), msg1, aggsigv_same));
     }
 
     @Test
@@ -204,27 +219,27 @@ public class SchemesTest extends BaseTest {
         assertEquals(vecSigSharesHex.size(), nSize);
         assertEquals(vecIdsHex.size(), nSize);
 
-        Uint8Vector vecSignHash = Util.hexToUint8Vector(strSignHash);
-        vecSignHash = Util.reverse(vecSignHash);
+        byte[] vecSignHash = Util.hexToBytes(strSignHash);
+        Util.reverse(vecSignHash);
         G1Element thresholdPublicKey = G1Element.fromBytes(Util.hexToBytes(strThresholdPublicKey), true);
         G2Element thresholdSignatureExpected = G2Element.fromBytes(Util.hexToBytes(strThresholdSignature), true);
 
         G2ElementVector vecSignatureShares = new G2ElementVector();
-        Uint8VectorVector vecIds = new Uint8VectorVector();
+        ByteVectorList vecIds = new ByteVectorList();
 
         for (int i = 0; i < nSize; ++i) {
-            vecIds.add(Util.reverse(Util.hexToUint8Vector(vecIdsHex.get(i))));
+            vecIds.add(Util.reverse(Util.hexToBytes(vecIdsHex.get(i))));
 
             PrivateKey skShare = PrivateKey.fromBytes(Util.hexToBytes(vecSecretKeySharesHex.get(i)));
             byte[] vecSigShareBytes = Util.hexToBytes(vecSigSharesHex.get(i));
             vecSignatureShares.add(G2Element.fromBytes(vecSigShareBytes, true));
-            G2Element sigShare = new LegacySchemeMPL().sign(skShare, bytes(vecSignHash));
+            G2Element sigShare = new LegacySchemeMPL().sign(skShare, vecSignHash);
             assertObjectEquals(sigShare, vecSignatureShares.get(vecSignatureShares.size() - 1));
             assertArrayEquals(sigShare.serialize(true), vecSigShareBytes);
         }
 
         G2Element thresholdSignature = DASHJBLS.signatureRecover(vecSignatureShares, vecIds);
         assertObjectEquals(thresholdSignature, thresholdSignatureExpected);
-        assertTrue(new LegacySchemeMPL().verify(thresholdPublicKey, bytes(vecSignHash), thresholdSignature));
+        assertTrue(new LegacySchemeMPL().verify(thresholdPublicKey, vecSignHash, thresholdSignature));
     }
 }
