@@ -60,8 +60,8 @@ public class LegacySchemeMPL extends CoreMPL {
     return DASHJBLSJNI.LegacySchemeMPL_verifySecure(swigCPtr, this, G1ElementVector.getCPtr(vecPublicKeys), vecPublicKeys, G2Element.getCPtr(signature), signature, message);
   }
 
-  public boolean aggregateVerifySignature(G1ElementVector pubkeys, Uint8VectorVector messages, G2Element signature) {
-    return DASHJBLSJNI.LegacySchemeMPL_aggregateVerifySignature(swigCPtr, this, G1ElementVector.getCPtr(pubkeys), pubkeys, Uint8VectorVector.getCPtr(messages), messages, G2Element.getCPtr(signature), signature);
+  public boolean aggregateVerify(G1ElementVector pubkeys, Uint8VectorVector messages, G2Element signature) {
+    return DASHJBLSJNI.LegacySchemeMPL_aggregateVerify(swigCPtr, this, G1ElementVector.getCPtr(pubkeys), pubkeys, Uint8VectorVector.getCPtr(messages), messages, G2Element.getCPtr(signature), signature);
   }
 
 }

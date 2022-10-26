@@ -609,11 +609,18 @@ SWIGINTERN void bls_BLS_setContextError(long error){
 SWIGINTERN long bls_BLS_getContext(){
         return (long)core_get();
     }
-SWIGINTERN bool bls_LegacySchemeMPL_AggregateVerifySignature(bls::LegacySchemeMPL *self,vector< bls::G1Element > const &pubkeys,vector< vector< uint8_t > > const &messages,bls::G2Element const &signature){
+SWIGINTERN bool bls_LegacySchemeMPL_aggregateVerify(bls::LegacySchemeMPL *self,vector< bls::G1Element > const &pubkeys,vector< vector< uint8_t > > const &messages,bls::G2Element const &signature){
         std::vector<bls::Bytes> messagesVec;
         messagesVec.reserve(messages.size());
         for (size_t i = 0; i < messages.size(); i++) {
             messagesVec.emplace_back(messages[i]);
+        }
+               for (auto b : messages) {
+                    std::cout << Util::HexStr(b) << std::endl;
+                }
+        std::cout << "avs: " << messages.size() << std::endl;
+        for (auto b : messagesVec) {
+            std::cout << Util::HexStr(b.begin(), b.size()) << std::endl;
         }
         return self->AggregateVerify(pubkeys, messagesVec, signature);
     }
@@ -11622,7 +11629,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1veri
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregateVerifySignature(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregateVerify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
   jboolean jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   vector< bls::G1Element > *arg2 = 0 ;
@@ -11652,7 +11659,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggr
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::G2Element const & reference is null");
     return 0;
   } 
-  result = (bool)bls_LegacySchemeMPL_AggregateVerifySignature(arg1,(vector< bls::G1Element > const &)*arg2,(std::vector< std::vector< unsigned char > > const &)*arg3,(bls::G2Element const &)*arg4);
+  result = (bool)bls_LegacySchemeMPL_aggregateVerify(arg1,(vector< bls::G1Element > const &)*arg2,(std::vector< std::vector< unsigned char > > const &)*arg3,(bls::G2Element const &)*arg4);
   jresult = (jboolean)result; 
   return jresult;
 }

@@ -68,13 +68,20 @@ namespace bls {
                                                                                     const vector<vector<uint8_t>> &messages,
                                                                                     const vector<uint8_t> &signature) final;
   %extend LegacySchemeMPL {
-    bool AggregateVerifySignature(const vector<G1Element> &pubkeys,
+    bool aggregateVerify(const vector<G1Element> &pubkeys,
                            const vector<vector<uint8_t>> &messages,
                            const G2Element &signature) final {
         std::vector<bls::Bytes> messagesVec;
         messagesVec.reserve(messages.size());
         for (size_t i = 0; i < messages.size(); i++) {
             messagesVec.emplace_back(messages[i]);
+        }
+               for (auto b : messages) {
+                    std::cout << Util::HexStr(b) << std::endl;
+                }
+        std::cout << "avs: " << messages.size() << std::endl;
+        for (auto b : messagesVec) {
+            std::cout << Util::HexStr(b.begin(), b.size()) << std::endl;
         }
         return self->AggregateVerify(pubkeys, messagesVec, signature);
     }
