@@ -10,7 +10,7 @@ The dashj-bls library is a Java implementation of the Dash BLS library.
 
 ### Technologies
 
-* Java 8
+* Java 11
 * [Maven 3+](http://maven.apache.org) - for building the project
 
 ### Getting started
@@ -21,15 +21,16 @@ To get started, it is best to have the latest JDK and Maven installed. The HEAD 
 To initialize the repo after cloning it: 
 ```
 git submodule update  --init --recursive
+git apply catch_changes.patch
 ```
 To perform a full build use (this includes the dashjbls shared library):
 ```
-mvn clean package
+mvn clean package -Dmaven.javadoc.skip=true
 ```
 To perform a full build without building the bls shared library and skip the test:
 ```
 
-mvn clean package -Pno-build-bls -DskipTests
+mvn clean package -Pno-build-bls -DskipTests -Dmaven.javadoc.skip=true
 ```
 To perform a full build and install it in the local maven repository:
 ```
@@ -40,6 +41,13 @@ You can also run
 mvn site:site
 ```
 to generate a website with useful information like JavaDocs.
+
+To publish to maven central:
+```bash
+mvn deploy -DskipTests -Dmaven.javadoc.skip=true
+
+```
+
 
 The outputs are under the `target` directory.
 
