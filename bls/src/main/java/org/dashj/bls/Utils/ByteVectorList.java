@@ -12,13 +12,24 @@ public class ByteVectorList extends Uint8VectorVector {
     }
     public ByteVectorList(List<byte[]> list) {
         for (byte [] array : list) {
-            add(new Uint8Vector(Util.byteArrayToShortArray(array)));
+            add(new ByteVector(array));
         }
     }
 
     public ByteVectorList(byte[][] arrays) {
         for (byte [] array : arrays) {
-            add(new Uint8Vector(Util.byteArrayToShortArray(array)));
+            add(new ByteVector(array));
         }
+    }
+
+    public ByteVectorList(byte [] firstByteArray, byte []... byteArrays) {
+        add(new ByteVector(firstByteArray));
+        for (byte [] byteArray: byteArrays) {
+            add(byteArray);
+        }
+    }
+
+    public void add(byte [] byteArray) {
+        add(new ByteVector(byteArray));
     }
 }
