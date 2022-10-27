@@ -11,7 +11,7 @@ import org.dashj.bls.Utils.ByteVectorList;
 import org.dashj.bls.Utils.G1ElementList;
 import org.dashj.bls.Utils.G2ElementList;
 import org.dashj.bls.Utils.PrivateKeyList;
-import org.dashj.bls.Utils.Util;
+import org.dashj.bls.Utils.HexUtils;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -91,9 +91,9 @@ public class AdvancedTest extends BaseTest {
         byte [] pkBytes = pk.serialize();
         byte [] signatureBytes = signature.serialize();
 
-        System.out.println(Util.hexStr(skBytes));    // 32 bytes
-        System.out.println(Util.hexStr(pkBytes));    // 48 bytes
-        System.out.println(Util.hexStr(signatureBytes));  // 96 bytes
+        System.out.println(HexUtils.hexStr(skBytes));    // 32 bytes
+        System.out.println(HexUtils.hexStr(pkBytes));    // 48 bytes
+        System.out.println(HexUtils.hexStr(signatureBytes));  // 96 bytes
 
         // Takes array of 32 bytes
         PrivateKey skc = PrivateKey.fromBytes(skBytes);

@@ -6,18 +6,18 @@
  */
 package org.dashj.bls;
 
-import org.dashj.bls.Utils.Util;
+import org.dashj.bls.Utils.HexUtils;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class HKDFTest extends BaseTest {
     static void testHKDF(String ikm_hex, String salt_hex, String info_hex, String prk_expected_hex, String okm_expected_hex, int L) {
-        byte[] ikm = Util.hexToBytes(ikm_hex);
-        byte[] salt = Util.hexToBytes(salt_hex);
-        byte[] info = Util.hexToBytes(info_hex);
-        byte[] prk_expected = Util.hexToBytes(prk_expected_hex);
-        byte[] okm_expected = Util.hexToBytes(okm_expected_hex);
+        byte[] ikm = HexUtils.hexToBytes(ikm_hex);
+        byte[] salt = HexUtils.hexToBytes(salt_hex);
+        byte[] info = HexUtils.hexToBytes(info_hex);
+        byte[] prk_expected = HexUtils.hexToBytes(prk_expected_hex);
+        byte[] okm_expected = HexUtils.hexToBytes(okm_expected_hex);
         byte[] prk = new byte[32];
         HKDF256.extract(prk, salt, salt.length, ikm, ikm.length);
         byte[] okm = new byte[L];

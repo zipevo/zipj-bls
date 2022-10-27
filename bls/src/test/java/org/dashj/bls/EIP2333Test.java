@@ -7,17 +7,17 @@
 
 package org.dashj.bls;
 
-import org.dashj.bls.Utils.Util;
+import org.dashj.bls.Utils.HexUtils;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class EIP2333Test extends BaseTest{
     void TestEIP2333(String seedHex, String masterSkHex, String childSkHex, long childIndex) {
-        byte [] masterSk = Util.hexToBytes(masterSkHex);
-        byte [] childSk = Util.hexToBytes(childSkHex);
+        byte [] masterSk = HexUtils.hexToBytes(masterSkHex);
+        byte [] childSk = HexUtils.hexToBytes(childSkHex);
 
-        PrivateKey master = new BasicSchemeMPL().keyGen(Util.hexToBytes(seedHex));
+        PrivateKey master = new BasicSchemeMPL().keyGen(HexUtils.hexToBytes(seedHex));
         PrivateKey child = HDKeys.deriveChildSk(master, childIndex);
 
         byte [] master_arr = new byte[32];

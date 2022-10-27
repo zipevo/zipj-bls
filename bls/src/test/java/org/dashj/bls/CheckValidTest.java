@@ -1,6 +1,6 @@
 package org.dashj.bls;
 
-import org.dashj.bls.Utils.Util;
+import org.dashj.bls.Utils.HexUtils;
 import org.junit.Test;
 
 import java.util.Arrays;

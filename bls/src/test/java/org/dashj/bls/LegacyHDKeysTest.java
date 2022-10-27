@@ -7,7 +7,7 @@
 
 package org.dashj.bls;
 
-import org.dashj.bls.Utils.Util;
+import org.dashj.bls.Utils.HexUtils;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -63,10 +63,10 @@ public class LegacyHDKeysTest extends BaseTest {
 
         G2Element sig = new LegacySchemeMPL().sign(sk3, seed);
 
-        System.out.println("sig: " + Util.hexStr(sig.serialize()));
-        System.out.println("pk4: " + Util.hexStr(pk4.serialize()));
-        System.out.println("sk3: " + Util.hexStr(sk3.serialize()));
-        System.out.println("seed: " + Util.hexStr(seed));
+        System.out.println("sig: " + HexUtils.hexStr(sig.serialize()));
+        System.out.println("pk4: " + HexUtils.hexStr(pk4.serialize()));
+        System.out.println("sk3: " + HexUtils.hexStr(sk3.serialize()));
+        System.out.println("seed: " + HexUtils.hexStr(seed));
         //TODO: determine why this fails
         //assertTrue(new LegacySchemeMPL().verify(sk3.getG1Element(), seed, sig));
 
@@ -103,12 +103,12 @@ public class LegacyHDKeysTest extends BaseTest {
         ExtendedPrivateKey esk = ExtendedPrivateKey.fromSeed(seed);
         ExtendedPublicKey epk = esk.getExtendedPublicKey();
 
-        System.out.println("epk:    " + Util.hexStr(epk.serialize()));
-        System.out.println("epk pub:" + Util.hexStr(epk.getPublicKey().serialize()));
-        System.out.println("epk cc: " + Util.hexStr(epk.getChainCode().serialize()));
+        System.out.println("epk:    " + HexUtils.hexStr(epk.serialize()));
+        System.out.println("epk pub:" + HexUtils.hexStr(epk.getPublicKey().serialize()));
+        System.out.println("epk cc: " + HexUtils.hexStr(epk.getChainCode().serialize()));
 
         G2Element sig1 = new LegacySchemeMPL().sign(esk.getPrivateKey(), seed);
-        System.out.println("sig1:" + Util.hexStr(sig1.serialize()));
+        System.out.println("sig1:" + HexUtils.hexStr(sig1.serialize()));
         // TODO: why does this fail?
         //assertTrue(new LegacySchemeMPL().verify(epk.getPublicKey(), seed, sig1));
     }

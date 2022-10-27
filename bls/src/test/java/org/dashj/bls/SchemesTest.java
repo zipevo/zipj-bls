@@ -11,13 +11,7 @@ import com.google.common.collect.Lists;
 import org.dashj.bls.Utils.ByteVectorList;
 import org.dashj.bls.Utils.G1ElementList;
 import org.dashj.bls.Utils.G2ElementList;
-import org.dashj.bls.Utils.Util;
-/**
- * Copyright (c) 2022-present, Dash Core Group
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+import org.dashj.bls.Utils.HexUtils;
 
 import org.junit.Test;
 
@@ -219,19 +213,19 @@ public class SchemesTest extends BaseTest {
         assertEquals(vecSigSharesHex.size(), nSize);
         assertEquals(vecIdsHex.size(), nSize);
 
-        byte[] vecSignHash = Util.hexToBytes(strSignHash);
-        Util.reverse(vecSignHash);
-        G1Element thresholdPublicKey = G1Element.fromBytes(Util.hexToBytes(strThresholdPublicKey), true);
-        G2Element thresholdSignatureExpected = G2Element.fromBytes(Util.hexToBytes(strThresholdSignature), true);
+        byte[] vecSignHash = HexUtils.hexToBytes(strSignHash);
+        HexUtils.reverse(vecSignHash);
+        G1Element thresholdPublicKey = G1Element.fromBytes(HexUtils.hexToBytes(strThresholdPublicKey), true);
+        G2Element thresholdSignatureExpected = G2Element.fromBytes(HexUtils.hexToBytes(strThresholdSignature), true);
 
         G2ElementVector vecSignatureShares = new G2ElementVector();
         ByteVectorList vecIds = new ByteVectorList();
 
         for (int i = 0; i < nSize; ++i) {
-            vecIds.add(Util.reverse(Util.hexToBytes(vecIdsHex.get(i))));
+            vecIds.add(HexUtils.reverse(HexUtils.hexToBytes(vecIdsHex.get(i))));
 
-            PrivateKey skShare = PrivateKey.fromBytes(Util.hexToBytes(vecSecretKeySharesHex.get(i)));
-            byte[] vecSigShareBytes = Util.hexToBytes(vecSigSharesHex.get(i));
+            PrivateKey skShare = PrivateKey.fromBytes(HexUtils.hexToBytes(vecSecretKeySharesHex.get(i)));
+            byte[] vecSigShareBytes = HexUtils.hexToBytes(vecSigSharesHex.get(i));
             vecSignatureShares.add(G2Element.fromBytes(vecSigShareBytes, true));
             G2Element sigShare = new LegacySchemeMPL().sign(skShare, vecSignHash);
             assertObjectEquals(sigShare, vecSignatureShares.get(vecSignatureShares.size() - 1));

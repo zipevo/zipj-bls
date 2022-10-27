@@ -8,10 +8,8 @@
 package org.dashj.bls;
 
 import org.dashj.bls.Utils.ByteVectorList;
-import org.dashj.bls.Utils.Util;
 import org.junit.Test;
 
-import java.security.PublicKey;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertFalse;

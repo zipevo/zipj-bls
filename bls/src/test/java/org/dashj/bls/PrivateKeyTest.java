@@ -7,7 +7,7 @@
 
 package org.dashj.bls;
 
-import org.dashj.bls.Utils.Util;
+import org.dashj.bls.Utils.HexUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -100,11 +100,11 @@ public class PrivateKeyTest extends BaseTest {
         PrivateKey pk1 = PrivateKey.fromSeedBIP32(aliceSeed);
         assertTrue(pk1.hasKeyData());
         byte[] privateKey = pk1.serialize(true);
-        byte[] knownPrivateKey = Util.hexToBytes("46891c2cec49593c81921e473db7480029e0fc1eb933c6b93d81f5370eb19fbd");
+        byte[] knownPrivateKey = HexUtils.hexToBytes("46891c2cec49593c81921e473db7480029e0fc1eb933c6b93d81f5370eb19fbd");
         assertArrayEquals(privateKey, knownPrivateKey);
         G1Element pubKey1 = pk1.getG1Element();
         byte[] pubKey1Bytes = pubKey1.serialize(true);
-        byte[] knownPublicKey = Util.hexToBytes("1790635de8740e9a6a6b15fb6b72f3a16afa0973d971979b6ba54761d6e2502c50db76f4d26143f05459a42cfd520d44");
+        byte[] knownPublicKey = HexUtils.hexToBytes("1790635de8740e9a6a6b15fb6b72f3a16afa0973d971979b6ba54761d6e2502c50db76f4d26143f05459a42cfd520d44");
         assertArrayEquals(pubKey1Bytes, knownPublicKey);
     }
 
