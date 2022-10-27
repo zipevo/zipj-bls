@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package org.dashj.bls;
 
 import org.dashj.bls.Utils.HexUtils;
@@ -29,10 +36,10 @@ public class CheckValidTest {
                 "8d5d0fb73b9c92df4eab4216e48c3e358578b4cc30f82c268bd6fef3bd34b558628daf1afef798d4c3b0fcd8b28c8973";
 
         // FromBytes throws
-        assertThrows(IllegalArgumentException.class, () -> G1Element.fromBytes(Util.hexToBytes(badPointHex)));
+        assertThrows(IllegalArgumentException.class, () -> G1Element.fromBytes(HexUtils.hexToBytes(badPointHex)));
 
         // FromBytesUnchecked does not throw
-        G1Element pk = G1Element.fromBytesUnchecked(Util.hexToBytes(badPointHex));
+        G1Element pk = G1Element.fromBytesUnchecked(HexUtils.hexToBytes(badPointHex));
         assertFalse(pk.isValid());
         assertThrows(IllegalArgumentException.class, pk::checkValid);
 

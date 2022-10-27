@@ -1,8 +1,13 @@
+/**
+ * Copyright (c) 2022-present, Dash Core Group
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 package org.dashj.bls.Utils;
 
 import org.dashj.bls.G1Element;
 import org.dashj.bls.G1ElementVector;
-import org.dashj.bls.Uint8VectorVector;
 
 import java.util.Arrays;
 import java.util.List;
