@@ -18,11 +18,13 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Run coverage
+      - name: Build
         run: |
           git submodule update --init --recursive
           git apply catch_changes.patch
           mvn clean package -DskipTests -Dmaven.javadoc.skip=true
+      - name: Run coverage
+        run: |
           mvn test -Pno-build-bls
           curl -Os https://uploader.codecov.io/latest/linux/codecov
           chmod +x codecov
