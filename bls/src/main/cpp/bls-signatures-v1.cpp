@@ -615,13 +615,6 @@ SWIGINTERN bool bls_LegacySchemeMPL_aggregateVerify(bls::LegacySchemeMPL *self,v
         for (size_t i = 0; i < messages.size(); i++) {
             messagesVec.emplace_back(messages[i]);
         }
-               for (auto b : messages) {
-                    std::cout << Util::HexStr(b) << std::endl;
-                }
-        std::cout << "avs: " << messages.size() << std::endl;
-        for (auto b : messagesVec) {
-            std::cout << Util::HexStr(b.begin(), b.size()) << std::endl;
-        }
         return self->AggregateVerify(pubkeys, messagesVec, signature);
     }
 
