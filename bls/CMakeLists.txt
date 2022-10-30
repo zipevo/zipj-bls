@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.14.0)
 set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
+set(CMAKE_CXX_FLAGS, "-fpermissive")
 add_library( # Sets the name of the library.
         dashjbls
         # Sets the library as a shared library.
@@ -39,7 +39,7 @@ include_directories(${JNI_INCLUDE_DIRS}
 IF ("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
     set_target_properties(dashjbls PROPERTIES PREFIX "")
 ENDIF()
-set(BUILD_BLS_PYTHON_BINDINGS "0")
+set(BUILD_BLS_PYTHON_BINDINGS "0" CACHE STRING "")
 target_link_libraries( # Specifies the target library.
         dashjbls
 
