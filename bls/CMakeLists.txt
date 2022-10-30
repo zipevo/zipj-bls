@@ -37,9 +37,9 @@ include_directories(${JNI_INCLUDE_DIRS}
 
 # This removes the 'lib' prefix from target library name on windows
 IF ("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
-set_target_properties(dashjbls PROPERTIES PREFIX "")
+    set_target_properties(dashjbls PROPERTIES PREFIX "")
 ENDIF()
-
+set(BUILD_BLS_PYTHON_BINDINGS "0")
 target_link_libraries( # Specifies the target library.
         dashjbls
 
