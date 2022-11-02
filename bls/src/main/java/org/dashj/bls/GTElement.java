@@ -8,16 +8,16 @@
 
 package org.dashj.bls;
 
-public class BLS {
+public class GTElement {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected BLS(long cPtr, boolean cMemoryOwn) {
+  protected GTElement(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(BLS obj) {
+  protected static long getCPtr(GTElement obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,36 +30,29 @@ public class BLS {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        DASHJBLSJNI.delete_BLS(swigCPtr);
+        DASHJBLSJNI.delete_GTElement(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public static boolean init() {
-    return DASHJBLSJNI.BLS_init();
+  public static GTElement fromBytes(byte[] bytes) {
+    return new GTElement(DASHJBLSJNI.GTElement_fromBytes(bytes), true);
   }
 
-  public static void checkRelicErrors() {
-    DASHJBLSJNI.BLS_checkRelicErrors();
+  public static GTElement fromBytesUnchecked(byte[] bytes) {
+    return new GTElement(DASHJBLSJNI.GTElement_fromBytesUnchecked(bytes), true);
   }
 
-  public static int getContextError() {
-    return DASHJBLSJNI.BLS_getContextError();
+  public static GTElement unity() {
+    return new GTElement(DASHJBLSJNI.GTElement_unity(), true);
   }
 
-  public static void setContextError(int error) {
-    DASHJBLSJNI.BLS_setContextError(error);
+  public void serialize(byte[] buffer) {
+    DASHJBLSJNI.GTElement_serialize__SWIG_0(swigCPtr, this, buffer);
   }
 
-  public static int getContext() {
-    return DASHJBLSJNI.BLS_getContext();
-  }
+  public byte[] serialize() { return DASHJBLSJNI.GTElement_serialize__SWIG_1(swigCPtr, this); }
 
-  public BLS() {
-    this(DASHJBLSJNI.new_BLS(), true);
-  }
-
-  public final static int MESSAGE_HASH_LEN = DASHJBLSJNI.BLS_MESSAGE_HASH_LEN_get();
-  public final static int RLC_OK = DASHJBLSJNI.BLS_RLC_OK_get();
+  public final static int SIZE = DASHJBLSJNI.GTElement_SIZE_get();
 }

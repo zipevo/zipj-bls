@@ -5,7 +5,7 @@
     <parent>
         <artifactId>dashj-bls-parent</artifactId>
         <groupId>org.dashj</groupId>
-        <version>0.18.1</version>
+        <version>1.2.5-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -26,7 +26,7 @@
             <plugin>
                 <groupId>com.googlecode.cmake-maven-project</groupId>
                 <artifactId>cmake-maven-plugin</artifactId>
-                <version>3.7.2-b1</version>
+                <version>3.23.2-b1</version>
                 <executions>
                     <execution>
                         <id>cmake-generate</id>
@@ -204,7 +204,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.2</version>
+                <version>0.8.6</version>
                 <configuration>
                     <excludes>
                         <!--exclude>**/Protos*.class</exclude--> <!-- Exclude generated protobuf classes -->
@@ -287,7 +287,7 @@
     <properties>
         <classifier>${platform}</classifier>
         <download.cmake>true</download.cmake>
-        <cmake.version>3.7.2-b1</cmake.version>
+        <cmake.version>3.23.2-b1</cmake.version>
     </properties>
 
     <profiles>
@@ -319,6 +319,8 @@
                                         <echo>* linux-x86_64-release</echo>
                                         <echo>* mac-x86_64-debug</echo>
                                         <echo>* mac-x86_64-release</echo>
+                                        <echo>* mac-armv8-debug</echo>
+                                        <echo>* mac-armv8-release</echo>
                                         <echo/>
                                         <echo>For instance: mvn -Pwindows-x86_32-debug install</echo>
                                         <fail/>
@@ -485,6 +487,45 @@
             </properties>
         </profile>
         <profile>
+            <id>mac-aarch64-release</id>
+            <activation>
+                <property>
+                    <name>osDetection</name>
+                    <value>!false</value>
+                </property>
+                <os>
+                    <family>mac</family>
+                    <arch>aarch64</arch>
+                </os>
+            </activation>
+            <properties>
+                <platform>mac-aarch64</platform>
+                <build.type>release</build.type>
+                <cmake.classifier>mac-aarch64</cmake.classifier>
+                <cmake.generator>Unix Makefiles</cmake.generator>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux-armv7_32-release</id>
+            <activation>
+                <property>
+                    <name>osDetection</name>
+                    <value>!false</value>
+                </property>
+                <os>
+                    <family>linux</family>
+                    <arch>arm</arch>
+                </os>
+            </activation>
+            <properties>
+                <platform>linux-arm</platform>
+                <build.type>release</build.type>
+                <cmake.classifier>linux-arm_32</cmake.classifier>
+                <cmake.generator>Unix Makefiles</cmake.generator>
+                <download.cmake>false</download.cmake>
+            </properties>
+        </profile>
+        <profile>
             <id>portable</id>
             <!--
             Sonatype requires a main jar, even for platform-specific artifacts, so we supply it with an
@@ -522,7 +563,7 @@
                         <plugin>
                             <groupId>com.googlecode.cmake-maven-project</groupId>
                             <artifactId>cmake-maven-plugin</artifactId>
-                            <version>3.7.2-b1</version>
+                            <version>3.23.2-b1</version>
                             <executions>
                                 <execution>
                                     <id>cmake-generate</id> <!-- here there must be the same identifier as defined in <build><plugins> section -->

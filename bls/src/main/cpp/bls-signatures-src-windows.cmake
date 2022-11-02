@@ -1,60 +1,62 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.1.0 FATAL_ERROR)
-set (CMAKE_CXX_STANDARD 11)
 file(GLOB HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/*.hpp)
 source_group("SrcHeaders" FILES ${HEADERS})
-include_directories(
-  ${INCLUDE_DIRECTORIES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/../contrib/relic/include
-  ${CMAKE_BINARY_DIR}/bls-signatures/src/contrib/relic/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/../contrib/catch
-  )
-set(C_LIB ${CMAKE_BINARY_DIR}/libbls.a)
-add_library(bls ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/chaincode.cpp)
-add_library(blstmp ${HEADERS}
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/extendedpublickey.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/extendedprivatekey.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/chaincode.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/signature.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/publickey.cpp
+
+add_library(bls-dash
+  ${HEADERS}
   ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/privatekey.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/bls.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/aggregationinfo.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/chaincode.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/elements.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/extendedprivatekey.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/extendedpublickey.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/legacy.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/schemes.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/threshold.cpp
 )
-set(OPREFIX object_)
-find_library(GMP_NAME NAMES libgmp.a gmp)
-find_library(SODIUM_NAME NAMES libsodium.a sodium)
-set(LIBRARIES_TO_COMBINE
-      COMMAND mkdir ${OPREFIX}$<TARGET_NAME:blstmp> && cd ${OPREFIX}$<TARGET_NAME:blstmp> &&  ${CMAKE_AR} -x $<TARGET_FILE:blstmp>
-      COMMAND mkdir ${OPREFIX}$<TARGET_NAME:relic_s> && cd ${OPREFIX}$<TARGET_NAME:relic_s> &&  ${CMAKE_AR} -x $<TARGET_FILE:relic_s>
+
+target_include_directories(bls-dash
+  PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures
+    $<$<BOOL:${GMP_FOUND}>:${GMP_INCLUDES}>
+    ${relic_SOURCE_DIR}/include
+    ${relic_BINARY_DIR}/include
 )
-if (GMP_FOUND)
-  list(APPEND LIBRARIES_TO_COMBINE COMMAND mkdir ${OPREFIX}gmp || true && cd ${OPREFIX}gmp &&  ${CMAKE_AR} -x ${GMP_NAME})
+
+target_compile_definitions(bls-dash
+  PRIVATE
+    BLSALLOC_SODIUM=1
+)
+
+target_link_libraries(bls-dash
+  PUBLIC
+    relic_s
+    sodium
+)
+
+install(DIRECTORY ${relic_SOURCE_DIR}/include/ DESTINATION include/bls-dash)
+install(DIRECTORY ${relic_BINARY_DIR}/include/ DESTINATION include/bls-dash)
+install(FILES ${HEADERS} DESTINATION include/bls-dash)
+install(FILES $<TARGET_FILE:bls-dash> DESTINATION lib)
+
+if(BUILD_BLS_TESTS)
+  add_executable(runtest bls-signatures/src/test.cpp)
+  INCLUDE(FindPkgConfig)
+  pkg_check_modules(CATCH2 catch2)
+  if (CATCH2_FOUND)
+    # Adding "catch2" subdir to include dirs because "catch.hpp" is included
+    # instead of "catch2/catch.hpp"
+    if (NOT CATCH2_INCLUDE_DIRS)
+      set(CATCH2_INCLUDE_DIRS ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
+    endif()
+    list(TRANSFORM CATCH2_INCLUDE_DIRS APPEND /catch2)
+    target_include_directories(runtest PRIVATE ${CATCH2_INCLUDE_DIRS})
+  else()
+    target_include_directories(runtest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../contrib/catch)
+  endif()
+  target_link_libraries(runtest PRIVATE bls-dash)
 endif()
-if (SODIUM_FOUND)
-  list(APPEND LIBRARIES_TO_COMBINE COMMAND mkdir ${OPREFIX}sodium || true && cd ${OPREFIX}sodium &&  ${CMAKE_AR} -x ${SODIUM_NAME})
-endif()
-add_custom_target(combined_custom
-        ${LIBRARIES_TO_COMBINE}
-        COMMAND ${CMAKE_AR} -rs ${C_LIB} ${OPREFIX}blstmp/*${CMAKE_C_OUTPUT_EXTENSION} ${OPREFIX}relic_s/*${CMAKE_C_OUTPUT_EXTENSION}
-        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-        DEPENDS blstmp relic_s
-        )
-add_library(combined STATIC IMPORTED GLOBAL)
-add_dependencies(combined combined_custom)
-target_link_libraries(bls combined)
-set_target_properties(combined
-        PROPERTIES
-        IMPORTED_LOCATION ${C_LIB}
-        )
-file(GLOB includes "${CMAKE_CURRENT_SOURCE_DIR}/*.hpp")
-install(FILES ${includes} DESTINATION include/chiabls)
-install(FILES ${C_LIB} DESTINATION lib)
-add_executable(runtest bls-signatures/src/test.cpp)
-add_executable(runbench bls-signatures/src/test-bench.cpp)
-if (SODIUM_FOUND)
-  target_link_libraries(runtest blstmp relic_s sodium)
-  target_link_libraries(runbench blstmp relic_s sodium)
-else()
-  target_link_libraries(runtest blstmp relic_s)
-  target_link_libraries(runbench blstmp relic_s)
+
+if(BUILD_BLS_BENCHMARKS)
+  add_executable(runbench bls-signatures/src/test-bench.cpp)
+  target_link_libraries(runbench PRIVATE bls-dash)
 endif()
