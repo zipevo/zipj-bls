@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 public class BLSJniLibrary {
     private static final Logger log = LoggerFactory.getLogger(BLSJniLibrary.class);
     public static String LIBRARY_NAME = "dashjbls";
-    public static String VERSION = "1.0-SNAPSHOT";
+    public static String VERSION = "1.2.5-SNAPSHOT";
 
     static private boolean isLibraryLoaded = false;
 
@@ -15,6 +15,10 @@ public class BLSJniLibrary {
     }
 
     public static void loadLibrary() {
+        loadLibrary(true);
+    }
+
+    public static void loadLibrary(boolean throwExceptionOnFailure) {
         try {
             System.loadLibrary(LIBRARY_NAME);
             log.info("{} was loaded successfully", LIBRARY_NAME);
@@ -22,15 +26,22 @@ public class BLSJniLibrary {
         } catch (UnsatisfiedLinkError | SecurityException x) {
             isLibraryLoaded = false;
             log.error("{} was not loaded successfully", LIBRARY_NAME);
-            throw new RuntimeException(x.getMessage(), x);
+            if (throwExceptionOnFailure)
+                throw new RuntimeException(x.getMessage(), x);
         }
     }
 
     public static void init() {
+        init(true);
+    }
+
+    public static void init(boolean throwExceptionOnFailure) {
         log.info("Initializing BLS JNI Library");
         if (!isLibraryLoaded) {
-            loadLibrary();
+            loadLibrary(throwExceptionOnFailure);
         }
-        BLS.init();
+        if (isLibraryLoaded) {
+            BLS.init();
+        }
     }
 }

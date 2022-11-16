@@ -16,6 +16,10 @@ public class ByteVectorList extends Uint8VectorVector {
         }
     }
 
+    public ByteVectorList(ByteVectorList list) {
+        super(list);
+    }
+
     public ByteVectorList(byte[][] arrays) {
         for (byte [] array : arrays) {
             add(new ByteVector(array));
