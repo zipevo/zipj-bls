@@ -19,8 +19,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.dashj</groupId>
-  <artifactId>dashj-bls-parent</artifactId>
+  <groupId>org.zipj</groupId>
+  <artifactId>zipj-bls-parent</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
 
@@ -36,14 +36,14 @@
 
 
   <scm>
-    <connection>scm:git:https://github.com/HashEngineering/dashj-bls</connection>
-    <developerConnection>scm:git:https://github.com/HashEngineering/dashj-bls</developerConnection>
-    <url>scm:git:https://github.com/HashEngineering/dashj-bls</url>
+    <connection>scm:git:https://github.com/zipevo/zipj-bls</connection>
+    <developerConnection>scm:git:https://github.com/zipevo/zipj-bls</developerConnection>
+    <url>scm:git:https://github.com/zipevo/zipj-bls</url>
   </scm>
 
-  <name>dashj Parent</name>
-  <description>Provides the common configuration for the dashj modules</description>
-  <url>http://dash.org/dashj/</url>
+  <name>zipj Parent</name>
+  <description>Provides the common configuration for the zipj modules</description>
+  <url>http://6zip.online/zipj/</url>
 
   <licenses>
     <license>
@@ -56,7 +56,7 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/HashEngineering/dashj/issues</url>
+    <url>https://github.com/zipevo/zipj/issues</url>
   </issueManagement>
 
   <mailingLists>
@@ -69,12 +69,12 @@
   <distributionManagement>
 
     <repository>
-      <id>ossrh-dash</id>
+      <id>ossrh-zip</id>
       <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
 
     <snapshotRepository>
-      <id>ossrh-dash</id>
+      <id>ossrh-zip</id>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
 
@@ -103,7 +103,7 @@
               <version>1.6.7</version>
               <extensions>true</extensions>
               <configuration>
-                  <serverId>ossrh-dash</serverId>
+                  <serverId>ossrh-zip</serverId>
                   <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                   <autoReleaseAfterClose>true</autoReleaseAfterClose>
               </configuration>
@@ -175,7 +175,7 @@
         <artifactId>slf4j-api</artifactId>
         <version>1.7.30</version>
       </dependency>
-      <!-- dashj consumers are expected to provide their own SLF4J adapters
+      <!-- zipj consumers are expected to provide their own SLF4J adapters
     such as logback, slf4j-log4j12, slf4j-jcl and so on
     see http://www.slf4j.org/faq.html -->
       <dependency>

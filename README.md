@@ -1,12 +1,12 @@
-# dashj-bls
+# zipj-bls
 
-> A Java library for working with Dash
+> A Java library for working with 6Zip
 
-[![Tests](https://github.com/dashevo/dashj-bls/workflows/Java%20CI/badge.svg?branch=master)](https://github.com/dashevo/dashj-bls/actions)
-![codecov](https://codecov.io/gh/dashevo/dashj-bls/branch/master/graph/badge.svg)
-### Welcome to dashj
+[![Tests](https://github.com/zipevo/zipj-bls/workflows/Java%20CI/badge.svg?branch=master)](https://github.com/zipevo/zipj-bls/actions)
+![codecov](https://codecov.io/gh/zipevo/zipj-bls/branch/master/graph/badge.svg)
+### Welcome to zipj
 
-The dashj-bls library is a Java implementation of the Dash BLS library.
+The zipj-bls library is a Java implementation of the 6Zip BLS library.
 
 ### Technologies
 
@@ -23,7 +23,7 @@ To initialize the repo after cloning it:
 git submodule update  --init --recursive
 git apply catch_changes.patch
 ```
-To perform a full build use (this includes the dashjbls shared library):
+To perform a full build use (this includes the zipjbls shared library):
 ```
 mvn clean package -Dmaven.javadoc.skip=true
 ```
@@ -61,4 +61,4 @@ mvn clean deploy -DskipTests -P release
 
 Alternatively, just import the project using your IDE. [IntelliJ](http://www.jetbrains.com/idea/download/) has Maven integration built-in and has a free Community Edition. Simply use `File | Import Project` and locate the `pom.xml` in the root of the cloned project source tree.
 
-The dashjbls library must still be built with `mvn`.
+The zipjbls library must still be built with `mvn`.

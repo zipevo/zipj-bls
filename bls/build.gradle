@@ -3,8 +3,8 @@ apply plugin: 'maven'
 apply plugin: 'eclipse'
 
 version = '0.18-SNAPSHOT'
-archivesBaseName = 'dashj-bls'
-eclipse.project.name = 'dashj-bls'
+archivesBaseName = 'zipj-bls'
+eclipse.project.name = 'zipj-bls'
 
 dependencies {
     implementation 'com.google.guava:guava:28.2-android'

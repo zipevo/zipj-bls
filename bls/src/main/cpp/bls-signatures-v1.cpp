@@ -622,7 +622,7 @@ SWIGINTERN bool bls_LegacySchemeMPL_aggregateVerify(bls::LegacySchemeMPL *self,v
 extern "C" {
 #endif
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8Vector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1Uint8Vector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< uint8_t > *result = 0 ;
   
@@ -634,7 +634,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8Vector_1_1SWIG
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8Vector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1Uint8Vector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< uint8_t > *arg1 = 0 ;
   std::vector< uint8_t > *result = 0 ;
@@ -653,7 +653,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8Vector_1_1SWIG
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   std::vector< unsigned char >::size_type result;
@@ -668,7 +668,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1capacity(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   std::vector< unsigned char >::size_type arg2 ;
   
@@ -686,7 +686,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1reserve(JNIE
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   bool result;
@@ -701,7 +701,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1isEmpty(
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   
   (void)jenv;
@@ -712,7 +712,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1clear(JNIEnv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8Vector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1Uint8Vector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
   jlong jresult = 0 ;
   jint arg1 ;
   unsigned char *arg2 = 0 ;
@@ -735,7 +735,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8Vector_1_1SWIG
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   jint result;
@@ -755,7 +755,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doSize(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   std::vector< unsigned char >::value_type *arg2 = 0 ;
   std::vector< unsigned char >::value_type temp2 ;
@@ -770,7 +770,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doAdd_1_1SWI
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jshort jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jshort jarg3) {
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   jint arg2 ;
   std::vector< unsigned char >::value_type *arg3 = 0 ;
@@ -792,7 +792,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doAdd_1_1SWI
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jshort JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jshort jresult = 0 ;
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   jint arg2 ;
@@ -814,7 +814,7 @@ SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doRemove(J
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jshort JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jshort jresult = 0 ;
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   jint arg2 ;
@@ -836,7 +836,7 @@ SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doGet(JNIE
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jshort jarg3) {
+SWIGEXPORT jshort JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jshort jarg3) {
   jshort jresult = 0 ;
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   jint arg2 ;
@@ -862,7 +862,7 @@ SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doSet(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8Vector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   jint arg2 ;
   jint arg3 ;
@@ -882,7 +882,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8Vector_1doRemoveRang
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1Uint8Vector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1Uint8Vector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< uint8_t > *arg1 = (std::vector< uint8_t > *) 0 ;
   
   (void)jenv;
@@ -924,7 +924,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1Uint8Vector(JNIEn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8VectorVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1Uint8VectorVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< std::vector< uint8_t > > *result = 0 ;
   
@@ -936,7 +936,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8VectorVector_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8VectorVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1Uint8VectorVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< std::vector< uint8_t > > *arg1 = 0 ;
   std::vector< std::vector< uint8_t > > *result = 0 ;
@@ -955,7 +955,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8VectorVector_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   std::vector< std::vector< unsigned char > >::size_type result;
@@ -970,7 +970,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1capaci
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   std::vector< std::vector< unsigned char > >::size_type arg2 ;
   
@@ -988,7 +988,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1reserv
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   bool result;
@@ -1003,7 +1003,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1is
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   
   (void)jenv;
@@ -1014,7 +1014,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1clear(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8VectorVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1Uint8VectorVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   jint arg1 ;
   std::vector< uint8_t > *arg2 = 0 ;
@@ -1040,7 +1040,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1Uint8VectorVector_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   jint result;
@@ -1060,7 +1060,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doSize
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   std::vector< std::vector< unsigned char > >::value_type *arg2 = 0 ;
   
@@ -1078,7 +1078,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doAdd_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   jint arg2 ;
   std::vector< std::vector< unsigned char > >::value_type *arg3 = 0 ;
@@ -1103,7 +1103,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doAdd_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   jint arg2 ;
@@ -1125,7 +1125,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doRem
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   jint arg2 ;
@@ -1147,7 +1147,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doGet
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   jint arg2 ;
@@ -1176,7 +1176,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doSet
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_Uint8VectorVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   jint arg2 ;
   jint arg3 ;
@@ -1196,7 +1196,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_Uint8VectorVector_1doRemo
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1Uint8VectorVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1Uint8VectorVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< std::vector< uint8_t > > *arg1 = (std::vector< std::vector< uint8_t > > *) 0 ;
   
   (void)jenv;
@@ -1238,7 +1238,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1Uint8VectorVector
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKeyVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1PrivateKeyVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *result = 0 ;
   
@@ -1250,7 +1250,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKeyVector_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKeyVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1PrivateKeyVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = 0 ;
   std::vector< bls::PrivateKey > *result = 0 ;
@@ -1269,7 +1269,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKeyVector_1_
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   std::vector< bls::PrivateKey >::size_type result;
@@ -1284,7 +1284,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1capacit
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   std::vector< bls::PrivateKey >::size_type arg2 ;
   
@@ -1302,7 +1302,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1reserve
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   bool result;
@@ -1317,7 +1317,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1isE
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   
   (void)jenv;
@@ -1328,7 +1328,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1clear(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKeyVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1PrivateKeyVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   jint arg1 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -1354,7 +1354,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKeyVector_1_
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   jint result;
@@ -1374,7 +1374,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doSize(
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   std::vector< bls::PrivateKey >::value_type *arg2 = 0 ;
   
@@ -1392,7 +1392,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doAdd_1
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   jint arg2 ;
   std::vector< bls::PrivateKey >::value_type *arg3 = 0 ;
@@ -1417,7 +1417,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doAdd_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   jint arg2 ;
@@ -1439,7 +1439,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doRemo
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   jint arg2 ;
@@ -1461,7 +1461,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doGet(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   jint arg2 ;
@@ -1490,7 +1490,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doSet(
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKeyVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   jint arg2 ;
   jint arg3 ;
@@ -1510,7 +1510,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKeyVector_1doRemov
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1PrivateKeyVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1PrivateKeyVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   
   (void)jenv;
@@ -1552,7 +1552,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1PrivateKeyVector(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1ElementVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G1ElementVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::G1Element > *result = 0 ;
   
@@ -1564,7 +1564,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1ElementVector_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1ElementVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G1ElementVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = 0 ;
   std::vector< bls::G1Element > *result = 0 ;
@@ -1583,7 +1583,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1ElementVector_1_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   std::vector< bls::G1Element >::size_type result;
@@ -1598,7 +1598,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1capacity
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   std::vector< bls::G1Element >::size_type arg2 ;
   
@@ -1616,7 +1616,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1reserve(
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   bool result;
@@ -1631,7 +1631,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1isEm
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   
   (void)jenv;
@@ -1642,7 +1642,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1clear(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1ElementVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G1ElementVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   jint arg1 ;
   bls::G1Element *arg2 = 0 ;
@@ -1668,7 +1668,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1ElementVector_1_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   jint result;
@@ -1688,7 +1688,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doSize(J
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   std::vector< bls::G1Element >::value_type *arg2 = 0 ;
   
@@ -1706,7 +1706,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doAdd_1_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   jint arg2 ;
   std::vector< bls::G1Element >::value_type *arg3 = 0 ;
@@ -1731,7 +1731,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doAdd_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   jint arg2 ;
@@ -1753,7 +1753,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doRemov
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   jint arg2 ;
@@ -1775,7 +1775,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doGet(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   jint arg2 ;
@@ -1804,7 +1804,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doSet(J
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1ElementVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   jint arg2 ;
   jint arg3 ;
@@ -1824,7 +1824,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1ElementVector_1doRemove
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G1ElementVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1G1ElementVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bls::G1Element > *arg1 = (std::vector< bls::G1Element > *) 0 ;
   
   (void)jenv;
@@ -1866,7 +1866,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G1ElementVector(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2ElementVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G2ElementVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::G2Element > *result = 0 ;
   
@@ -1878,7 +1878,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2ElementVector_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2ElementVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G2ElementVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = 0 ;
   std::vector< bls::G2Element > *result = 0 ;
@@ -1897,7 +1897,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2ElementVector_1_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   std::vector< bls::G2Element >::size_type result;
@@ -1912,7 +1912,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1capacity
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   std::vector< bls::G2Element >::size_type arg2 ;
   
@@ -1930,7 +1930,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1reserve(
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   bool result;
@@ -1945,7 +1945,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1isEm
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   
   (void)jenv;
@@ -1956,7 +1956,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1clear(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2ElementVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G2ElementVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   jint arg1 ;
   bls::G2Element *arg2 = 0 ;
@@ -1982,7 +1982,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2ElementVector_1_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   jint result;
@@ -2002,7 +2002,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doSize(J
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   std::vector< bls::G2Element >::value_type *arg2 = 0 ;
   
@@ -2020,7 +2020,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doAdd_1_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   jint arg2 ;
   std::vector< bls::G2Element >::value_type *arg3 = 0 ;
@@ -2045,7 +2045,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doAdd_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   jint arg2 ;
@@ -2067,7 +2067,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doRemov
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   jint arg2 ;
@@ -2089,7 +2089,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doGet(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   jint arg2 ;
@@ -2118,7 +2118,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doSet(J
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2ElementVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   jint arg2 ;
   jint arg3 ;
@@ -2138,7 +2138,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2ElementVector_1doRemove
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G2ElementVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1G2ElementVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bls::G2Element > *arg1 = (std::vector< bls::G2Element > *) 0 ;
   
   (void)jenv;
@@ -2180,7 +2180,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G2ElementVector(J
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1MESSAGE_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BLS_1MESSAGE_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -2192,7 +2192,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1MESSAGE_1HASH_1LEN_1
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1init(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BLS_1init(JNIEnv *jenv, jclass jcls) {
   jboolean jresult = 0 ;
   bool result;
   
@@ -2236,7 +2236,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1init(JNIEnv *jen
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1checkRelicErrors(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BLS_1checkRelicErrors(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   {
@@ -2275,7 +2275,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1checkRelicErrors(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1RLC_1OK_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BLS_1RLC_1OK_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -2287,7 +2287,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1RLC_1OK_1get(JNIEnv 
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1getContextError(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BLS_1getContextError(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -2299,7 +2299,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1getContextError(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1setContextError(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BLS_1setContextError(JNIEnv *jenv, jclass jcls, jint jarg1) {
   long arg1 ;
   
   (void)jenv;
@@ -2309,7 +2309,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1setContextError(JNIE
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1getContext(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BLS_1getContext(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -2321,7 +2321,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_BLS_1getContext(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1BLS(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1BLS(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::BLS *result = 0 ;
   
@@ -2365,7 +2365,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1BLS(JNIEnv *jenv, j
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1BLS(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1BLS(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::BLS *arg1 = (bls::BLS *) 0 ;
   
   (void)jenv;
@@ -2407,7 +2407,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1BLS(JNIEnv *jenv,
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ChainCode_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -2419,7 +2419,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1SIZE_1get(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1fromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ChainCode_1fromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bls::ChainCode result;
@@ -2471,7 +2471,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1fromBytes(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ChainCode_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1ChainCode_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ChainCode *arg1 = 0 ;
   bls::ChainCode *result = 0 ;
@@ -2522,7 +2522,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ChainCode_1_1SWIG_1
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_objectEquals_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   bls::ChainCode *arg1 = 0 ;
   bls::ChainCode *arg2 = 0 ;
@@ -2580,7 +2580,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ChainCode_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::ChainCode *arg1 = (bls::ChainCode *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   
@@ -2631,7 +2631,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1serialize_1_1S
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ChainCode_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyteArray jresult = 0 ;
   bls::ChainCode *arg1 = (bls::ChainCode *) 0 ;
   std::vector< uint8_t > result;
@@ -2682,7 +2682,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ChainCode_1serializ
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ChainCode_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1ChainCode_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::ChainCode *result = 0 ;
   
@@ -2726,7 +2726,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ChainCode_1_1SWIG_1
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1ChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1ChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::ChainCode *arg1 = (bls::ChainCode *) 0 ;
   
   (void)jenv;
@@ -2768,7 +2768,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1ChainCode(JNIEnv 
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -2780,7 +2780,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1SIZE_1get(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1Element_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G1Element_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::G1Element *result = 0 ;
   
@@ -2824,7 +2824,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1Element_1_1SWIG_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bool arg2 ;
@@ -2878,7 +2878,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytes_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bls::G1Element result;
@@ -2930,7 +2930,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytes_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytesUnchecked_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1fromBytesUnchecked_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bool arg2 ;
@@ -2984,7 +2984,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytesUnch
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytesUnchecked_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1fromBytesUnchecked_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bls::G1Element result;
@@ -3036,7 +3036,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromBytesUnch
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromMessage(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jint jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1fromMessage(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jint jarg3) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
@@ -3098,7 +3098,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1fromMessage(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1generator(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1generator(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::G1Element result;
   
@@ -3142,7 +3142,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1generator(JNI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1isValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1isValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   bool result;
@@ -3189,7 +3189,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1isValid(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1checkValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1checkValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   
   (void)jenv;
@@ -3232,7 +3232,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1checkValid(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1negate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1negate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   bls::G1Element result;
@@ -3279,7 +3279,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1negate(JNIEnv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1pair(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1pair(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   bls::G2Element *arg2 = 0 ;
@@ -3333,7 +3333,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1pair(JNIEnv *
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1getFingerprint_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1getFingerprint_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   bool arg2 ;
@@ -3382,7 +3382,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1getFingerprin
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1getFingerprint_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1getFingerprint_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   uint32_t result;
@@ -3429,7 +3429,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1getFingerprin
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   jbyteArray jresult = 0 ;
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   bool arg2 ;
@@ -3482,7 +3482,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1serializ
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G1Element_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyteArray jresult = 0 ;
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   std::vector< uint8_t > result;
@@ -3533,7 +3533,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G1Element_1serializ
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_objectEquals_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   bls::G1Element *arg1 = 0 ;
   bls::G1Element *arg2 = 0 ;
@@ -3591,7 +3591,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_add_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_add_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = 0 ;
   bls::G1Element *arg2 = 0 ;
@@ -3649,7 +3649,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_add_1_1SWIG_10(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_andOperator(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_andOperator(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = 0 ;
   bls::G2Element *arg2 = 0 ;
@@ -3707,7 +3707,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_andOperator(JNIEnv *jenv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1Element_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G1Element_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = 0 ;
   bls::G1Element *result = 0 ;
@@ -3758,7 +3758,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G1Element_1_1SWIG_1
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G1Element(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1G1Element(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::G1Element *arg1 = (bls::G1Element *) 0 ;
   
   (void)jenv;
@@ -3800,7 +3800,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G1Element(JNIEnv 
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -3812,7 +3812,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1SIZE_1get(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2Element_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G2Element_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::G2Element *result = 0 ;
   
@@ -3856,7 +3856,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2Element_1_1SWIG_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bool arg2 ;
@@ -3910,7 +3910,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytes_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bls::G2Element result;
@@ -3962,7 +3962,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytes_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytesUnchecked_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1fromBytesUnchecked_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bool arg2 ;
@@ -4016,7 +4016,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytesUnch
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytesUnchecked_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1fromBytesUnchecked_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   bls::G2Element result;
@@ -4068,7 +4068,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromBytesUnch
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromMessage_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jint jarg3, jboolean jarg4) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1fromMessage_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jint jarg3, jboolean jarg4) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
@@ -4132,7 +4132,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromMessage_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromMessage_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jint jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1fromMessage_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jint jarg3) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
@@ -4194,7 +4194,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1fromMessage_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1generator(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1generator(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::G2Element result;
   
@@ -4238,7 +4238,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1generator(JNI
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1isValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1isValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   bls::G2Element *arg1 = (bls::G2Element *) 0 ;
   bool result;
@@ -4285,7 +4285,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1isValid(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1checkValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1checkValid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   bls::G2Element *arg1 = (bls::G2Element *) 0 ;
   
   (void)jenv;
@@ -4328,7 +4328,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1checkValid(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1negate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1negate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::G2Element *arg1 = (bls::G2Element *) 0 ;
   bls::G2Element result;
@@ -4375,7 +4375,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1negate(JNIEnv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1pair(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1pair(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::G2Element *arg1 = (bls::G2Element *) 0 ;
   bls::G1Element *arg2 = 0 ;
@@ -4429,7 +4429,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1pair(JNIEnv *
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   jbyteArray jresult = 0 ;
   bls::G2Element *arg1 = (bls::G2Element *) 0 ;
   bool arg2 ;
@@ -4482,7 +4482,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1serializ
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_G2Element_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyteArray jresult = 0 ;
   bls::G2Element *arg1 = (bls::G2Element *) 0 ;
   std::vector< uint8_t > result;
@@ -4533,7 +4533,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_G2Element_1serializ
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_objectEquals_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   bls::G2Element *arg1 = 0 ;
   bls::G2Element *arg2 = 0 ;
@@ -4591,7 +4591,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_add_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_add_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::G2Element *arg1 = 0 ;
   bls::G2Element *arg2 = 0 ;
@@ -4649,7 +4649,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_add_1_1SWIG_11(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2Element_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1G2Element_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::G2Element *arg1 = 0 ;
   bls::G2Element *result = 0 ;
@@ -4700,7 +4700,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1G2Element_1_1SWIG_1
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G2Element(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1G2Element(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::G2Element *arg1 = (bls::G2Element *) 0 ;
   
   (void)jenv;
@@ -4742,7 +4742,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1G2Element(JNIEnv 
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_GTElement_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -4754,7 +4754,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1SIZE_1get(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1fromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_GTElement_1fromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   SwigValueWrapper< bls::GTElement > result;
@@ -4806,7 +4806,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1fromBytes(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1fromBytesUnchecked(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_GTElement_1fromBytesUnchecked(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::Bytes > arg1 ;
   SwigValueWrapper< bls::GTElement > result;
@@ -4858,7 +4858,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1fromBytesUnch
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1unity(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_GTElement_1unity(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   SwigValueWrapper< bls::GTElement > result;
   
@@ -4902,7 +4902,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1unity(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_GTElement_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::GTElement *arg1 = (bls::GTElement *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   
@@ -4953,7 +4953,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1serialize_1_1S
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_GTElement_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyteArray jresult = 0 ;
   bls::GTElement *arg1 = (bls::GTElement *) 0 ;
   std::vector< uint8_t > result;
@@ -5004,7 +5004,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_GTElement_1serializ
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_objectEquals_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   bls::GTElement *arg1 = 0 ;
   bls::GTElement *arg2 = 0 ;
@@ -5062,7 +5062,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_multiply_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::GTElement *arg1 = 0 ;
   bls::GTElement *arg2 = 0 ;
@@ -5120,7 +5120,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_10(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1GTElement(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1GTElement(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::GTElement *arg1 = (bls::GTElement *) 0 ;
   
   (void)jenv;
@@ -5162,7 +5162,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1GTElement(JNIEnv 
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1PRIVATE_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1PRIVATE_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   long result;
   
@@ -5174,7 +5174,7 @@ SWIGEXPORT jint JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1PRIVATE_1KEY_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1fromSeedBIP32(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1fromSeedBIP32(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bls::PrivateKey result;
@@ -5226,7 +5226,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1fromSeedBIP3
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1randomPrivateKey(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1randomPrivateKey(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::PrivateKey result;
   
@@ -5270,7 +5270,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1randomPrivat
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bool arg2 ;
@@ -5324,7 +5324,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1fromBytes_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bls::PrivateKey result;
@@ -5376,7 +5376,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1fromBytes_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = 0 ;
   bls::PrivateKey result;
@@ -5427,7 +5427,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1aggregate(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1PrivateKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::PrivateKey *result = 0 ;
   
@@ -5471,7 +5471,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKey_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKey_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1PrivateKey_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   bls::PrivateKey *result = 0 ;
@@ -5522,7 +5522,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PrivateKey_1_1SWIG_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1PrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1PrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   
   (void)jenv;
@@ -5564,7 +5564,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1PrivateKey(JNIEnv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1getG1Element(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1getG1Element(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   bls::G1Element *result = 0 ;
@@ -5611,7 +5611,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1getG1Element
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1getG2Element(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1getG2Element(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   bls::G2Element *result = 0 ;
@@ -5658,7 +5658,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1getG2Element
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1getG2Power(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1getG2Power(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   bls::G2Element *arg2 = 0 ;
@@ -5712,7 +5712,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1getG2Power(J
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1isZero(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1isZero(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   bool result;
@@ -5759,7 +5759,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1isZero(JN
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_objectEquals_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -5817,7 +5817,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_multiply_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -5875,7 +5875,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_11(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_multiply_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   bls::G1Element *arg2 = 0 ;
@@ -5933,7 +5933,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_12(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_multiply_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::G2Element *arg1 = 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -5991,7 +5991,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_13(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_multiply_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   bls::G2Element *arg2 = 0 ;
@@ -6049,7 +6049,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_multiply_1_1SWIG_14(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   
@@ -6100,7 +6100,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1serialize_1_1
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   jbyteArray jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   bool arg2 ;
@@ -6153,7 +6153,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1seriali
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1serialize_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1serialize_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyteArray jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   std::vector< uint8_t > result;
@@ -6204,7 +6204,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1seriali
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1signG2_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5, jboolean jarg6) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1signG2_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5, jboolean jarg6) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
@@ -6273,7 +6273,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1signG2_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1signG2_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1signG2_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
@@ -6340,7 +6340,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1signG2_1_1SW
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1hasKeyData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PrivateKey_1hasKeyData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   bool result;
@@ -6387,7 +6387,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PrivateKey_1hasKeyDat
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -6399,7 +6399,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1VERSI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -6411,7 +6411,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1SIZE_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1fromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bool arg2 ;
@@ -6465,7 +6465,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1fromB
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1fromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bls::ExtendedPublicKey result;
@@ -6517,7 +6517,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1fromB
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1publicChild_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1publicChild_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t arg2 ;
@@ -6568,7 +6568,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1publi
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1publicChild_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1publicChild_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t arg2 ;
@@ -6617,7 +6617,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1publi
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1getVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t result;
@@ -6664,7 +6664,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getVe
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1getDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint8_t result;
@@ -6711,7 +6711,7 @@ SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getD
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1getParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t result;
@@ -6758,7 +6758,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getPa
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1getChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t result;
@@ -6805,7 +6805,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getCh
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1getChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   bls::ChainCode result;
@@ -6852,7 +6852,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getCh
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1getPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   bls::G1Element result;
@@ -6899,7 +6899,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1getPu
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_objectEquals_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = 0 ;
   bls::ExtendedPublicKey *arg2 = 0 ;
@@ -6957,7 +6957,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jboolean jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jboolean jarg3) {
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   bool arg3 ;
@@ -7010,7 +7010,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1serial
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   
@@ -7061,7 +7061,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1serial
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   jbyteArray jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   bool arg2 ;
@@ -7114,7 +7114,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPublicKey_1serialize_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyteArray jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   std::vector< uint8_t > result;
@@ -7165,7 +7165,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPublicKey_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ExtendedPublicKey(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1ExtendedPublicKey(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *result = 0 ;
   
@@ -7209,7 +7209,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ExtendedPublicKey(J
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1ExtendedPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1ExtendedPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   
   (void)jenv;
@@ -7251,7 +7251,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1ExtendedPublicKey
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -7263,7 +7263,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1SIZE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1fromSeed(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1fromSeed(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bls::ExtendedPrivateKey result;
@@ -7315,7 +7315,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1from
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1fromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1fromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bls::ExtendedPrivateKey result;
@@ -7367,7 +7367,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1from
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1privateChild_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1privateChild_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t arg2 ;
@@ -7418,7 +7418,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1priv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1privateChild_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1privateChild_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t arg2 ;
@@ -7467,7 +7467,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1priv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1publicChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1publicChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t arg2 ;
@@ -7516,7 +7516,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1publ
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t result;
@@ -7563,7 +7563,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getV
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint8_t result;
@@ -7610,7 +7610,7 @@ SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1get
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t result;
@@ -7657,7 +7657,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getP
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t result;
@@ -7704,7 +7704,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getC
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   bls::ChainCode result;
@@ -7751,7 +7751,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getC
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   bls::PrivateKey result;
@@ -7798,7 +7798,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getP
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   bls::G1Element result;
@@ -7845,7 +7845,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getP
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getExtendedPublicKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getExtendedPublicKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   bool arg2 ;
@@ -7894,7 +7894,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getExtendedPublicKey_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1getExtendedPublicKey_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   bls::ExtendedPublicKey result;
@@ -7941,7 +7941,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1getE
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_objectEquals_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = 0 ;
   bls::ExtendedPrivateKey *arg2 = 0 ;
@@ -7999,7 +7999,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_objectEquals_1_1SWIG_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   
@@ -8050,7 +8050,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1seria
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_ExtendedPrivateKey_1serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyteArray jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   std::vector< uint8_t > result;
@@ -8101,7 +8101,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_ExtendedPrivateKey_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1ExtendedPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1ExtendedPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   
   (void)jenv;
@@ -8143,7 +8143,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1ExtendedPrivateKe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ExtendedPrivateKey(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1ExtendedPrivateKey(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *result = 0 ;
   
@@ -8187,7 +8187,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1ExtendedPrivateKey(
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jshort JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
   jshort jresult = 0 ;
   unsigned char result;
   
@@ -8199,7 +8199,7 @@ SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1HASH_1LEN_1get(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1keyGen(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1keyGen(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   bls::Bytes *arg1 = 0 ;
   bls::PrivateKey result;
@@ -8251,7 +8251,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1keyGen(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1iKMToLamportSk(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1iKMToLamportSk(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5) {
   uint8_t *arg1 = (uint8_t *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
@@ -8319,7 +8319,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1iKMToLamportSk(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1parentSkToLamportPK(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2, jobject jarg2_, jlong jarg3) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1parentSkToLamportPK(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2, jobject jarg2_, jlong jarg3) {
   uint8_t *arg1 = (uint8_t *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
   uint32_t arg3 ;
@@ -8376,7 +8376,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1parentSkToLamport
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildSk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1deriveChildSk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   uint32_t arg2 ;
@@ -8429,7 +8429,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildSk(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildSkUnhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1deriveChildSkUnhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   uint32_t arg2 ;
@@ -8482,7 +8482,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildSkUnh
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildG1Unhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1deriveChildG1Unhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::G1Element *arg1 = 0 ;
   uint32_t arg2 ;
@@ -8535,7 +8535,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildG1Unh
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildG2Unhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HDKeys_1deriveChildG2Unhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::G2Element *arg1 = 0 ;
   uint32_t arg2 ;
@@ -8588,7 +8588,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_HDKeys_1deriveChildG2Unh
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1HDKeys(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1HDKeys(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::HDKeys *result = 0 ;
   
@@ -8632,7 +8632,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1HDKeys(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1HDKeys(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1HDKeys(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::HDKeys *arg1 = (bls::HDKeys *) 0 ;
   
   (void)jenv;
@@ -8674,7 +8674,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1HDKeys(JNIEnv *je
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jshort JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HKDF256_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
   jshort jresult = 0 ;
   unsigned char result;
   
@@ -8686,7 +8686,7 @@ SWIGEXPORT jshort JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1HASH_1LEN_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1extract(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HKDF256_1extract(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jbyteArray jarg2, jlong jarg3, jbyteArray jarg4, jlong jarg5) {
   uint8_t *arg1 = (uint8_t *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
@@ -8754,7 +8754,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1extract(JNIEnv *
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1expand(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2, jbyteArray jarg3, jbyteArray jarg4, jlong jarg5) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HKDF256_1expand(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2, jbyteArray jarg3, jbyteArray jarg4, jlong jarg5) {
   uint8_t *arg1 = (uint8_t *) 0 ;
   size_t arg2 ;
   uint8_t *arg3 = (uint8_t *) 0 ;
@@ -8822,7 +8822,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1expand(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1extractExpand(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2, jbyteArray jarg3, jlong jarg4, jbyteArray jarg5, jlong jarg6, jbyteArray jarg7, jlong jarg8) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_HKDF256_1extractExpand(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2, jbyteArray jarg3, jlong jarg4, jbyteArray jarg5, jlong jarg6, jbyteArray jarg7, jlong jarg8) {
   uint8_t *arg1 = (uint8_t *) 0 ;
   size_t arg2 ;
   uint8_t *arg3 = (uint8_t *) 0 ;
@@ -8902,7 +8902,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_HKDF256_1extractExpand(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1HKDF256(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1HKDF256(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::HKDF256 *result = 0 ;
   
@@ -8946,7 +8946,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1HKDF256(JNIEnv *jen
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1HKDF256(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1HKDF256(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::HKDF256 *arg1 = (bls::HKDF256 *) 0 ;
   
   (void)jenv;
@@ -8988,7 +8988,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1HKDF256(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1CoreMPL(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1CoreMPL(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   jlong jresult = 0 ;
   std::string *arg1 = 0 ;
   bls::CoreMPL *result = 0 ;
@@ -9042,7 +9042,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1CoreMPL(JNIEnv *jen
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1keyGen(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1keyGen(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -9097,7 +9097,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1keyGen(JNIEnv *
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1skToPk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1skToPk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jbyteArray jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -9155,7 +9155,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1skToPk(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1skToG1(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1skToG1(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -9209,7 +9209,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1skToG1(JNIEnv *
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -9271,7 +9271,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1sign(JNIEnv *je
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1verify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1verify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -9342,7 +9342,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1verify_1_1SW
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1verify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1verify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
   jboolean jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::G1Element *arg2 = 0 ;
@@ -9411,7 +9411,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1verify_1_1SW
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregate_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1aggregate_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jbyteArray jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   vector< vector< uint8_t > > *arg2 = 0 ;
@@ -9469,7 +9469,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregate_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregate_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1aggregate_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   vector< bls::G2Element > *arg2 = 0 ;
@@ -9523,7 +9523,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregate_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregate_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1aggregate_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   vector< bls::G1Element > *arg2 = 0 ;
@@ -9577,7 +9577,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregate_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregateSecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1aggregateSecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   std::vector< bls::G1Element > *arg2 = 0 ;
@@ -9646,7 +9646,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregateSecure
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1verifySecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1verifySecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   std::vector< bls::G1Element > *arg2 = 0 ;
@@ -9715,7 +9715,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1verifySecure
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1aggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   vector< vector< uint8_t > > *arg2 = 0 ;
@@ -9790,7 +9790,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregateVer
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1aggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
   jboolean jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   vector< bls::G1Element > *arg2 = 0 ;
@@ -9858,7 +9858,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1aggregateVer
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1deriveChildSk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1deriveChildSk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -9914,7 +9914,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1deriveChildSk(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1deriveChildSkUnhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1deriveChildSkUnhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -9970,7 +9970,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1deriveChildSkUn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1deriveChildPkUnhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_CoreMPL_1deriveChildPkUnhardened(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
   jlong jresult = 0 ;
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   bls::G1Element *arg2 = 0 ;
@@ -10026,7 +10026,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_CoreMPL_1deriveChildPkUn
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1CoreMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1CoreMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::CoreMPL *arg1 = (bls::CoreMPL *) 0 ;
   
   (void)jenv;
@@ -10068,7 +10068,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1CoreMPL(JNIEnv *j
 }
 
 
-SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jstring JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BasicSchemeMPL_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
   jstring jresult = 0 ;
   std::string *result = 0 ;
   
@@ -10080,7 +10080,7 @@ SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1CIPHER
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1BasicSchemeMPL(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1BasicSchemeMPL(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::BasicSchemeMPL *result = 0 ;
   
@@ -10124,7 +10124,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1BasicSchemeMPL(JNIE
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1aggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BasicSchemeMPL_1aggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::BasicSchemeMPL *arg1 = (bls::BasicSchemeMPL *) 0 ;
   vector< vector< uint8_t > > *arg2 = 0 ;
@@ -10199,7 +10199,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1aggre
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1aggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BasicSchemeMPL_1aggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
   jboolean jresult = 0 ;
   bls::BasicSchemeMPL *arg1 = (bls::BasicSchemeMPL *) 0 ;
   vector< bls::G1Element > *arg2 = 0 ;
@@ -10267,7 +10267,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1aggre
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1BasicSchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1BasicSchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::BasicSchemeMPL *arg1 = (bls::BasicSchemeMPL *) 0 ;
   
   (void)jenv;
@@ -10309,7 +10309,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1BasicSchemeMPL(JN
 }
 
 
-SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jstring JNICALL Java_org_zipj_bls_ZIPJBLSJNI_AugSchemeMPL_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
   jstring jresult = 0 ;
   std::string *result = 0 ;
   
@@ -10321,7 +10321,7 @@ SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1CIPHERSU
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1AugSchemeMPL(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1AugSchemeMPL(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::AugSchemeMPL *result = 0 ;
   
@@ -10365,7 +10365,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1AugSchemeMPL(JNIEnv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1sign_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_AugSchemeMPL_1sign_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3) {
   jlong jresult = 0 ;
   bls::AugSchemeMPL *arg1 = (bls::AugSchemeMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -10427,7 +10427,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1sign_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1sign_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_AugSchemeMPL_1sign_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
   jlong jresult = 0 ;
   bls::AugSchemeMPL *arg1 = (bls::AugSchemeMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -10496,7 +10496,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1sign_1_1SW
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_AugSchemeMPL_1verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::AugSchemeMPL *arg1 = (bls::AugSchemeMPL *) 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -10567,7 +10567,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1verify(
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1aggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_AugSchemeMPL_1aggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::AugSchemeMPL *arg1 = (bls::AugSchemeMPL *) 0 ;
   vector< vector< uint8_t > > *arg2 = 0 ;
@@ -10642,7 +10642,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1aggrega
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1aggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_AugSchemeMPL_1aggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
   jboolean jresult = 0 ;
   bls::AugSchemeMPL *arg1 = (bls::AugSchemeMPL *) 0 ;
   vector< bls::G1Element > *arg2 = 0 ;
@@ -10710,7 +10710,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1aggrega
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1AugSchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1AugSchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::AugSchemeMPL *arg1 = (bls::AugSchemeMPL *) 0 ;
   
   (void)jenv;
@@ -10752,7 +10752,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1AugSchemeMPL(JNIE
 }
 
 
-SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jstring JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
   jstring jresult = 0 ;
   std::string *result = 0 ;
   
@@ -10764,7 +10764,7 @@ SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1CIPHERSU
 }
 
 
-SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1POP_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jstring JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1POP_1CIPHERSUITE_1ID_1get(JNIEnv *jenv, jclass jcls) {
   jstring jresult = 0 ;
   std::string *result = 0 ;
   
@@ -10776,7 +10776,7 @@ SWIGEXPORT jstring JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1POP_1CIP
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PopSchemeMPL(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1PopSchemeMPL(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::PopSchemeMPL *result = 0 ;
   
@@ -10820,7 +10820,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1PopSchemeMPL(JNIEnv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1popProve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1popProve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   bls::PopSchemeMPL *arg1 = (bls::PopSchemeMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -10874,7 +10874,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1popProve(J
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1popVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1popVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
   jboolean jresult = 0 ;
   bls::PopSchemeMPL *arg1 = (bls::PopSchemeMPL *) 0 ;
   bls::G1Element *arg2 = 0 ;
@@ -10935,7 +10935,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1popVeri
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1popVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1popVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3) {
   jboolean jresult = 0 ;
   bls::PopSchemeMPL *arg1 = (bls::PopSchemeMPL *) 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -10998,7 +10998,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1popVeri
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1fastAggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1fastAggregateVerify_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
   jboolean jresult = 0 ;
   bls::PopSchemeMPL *arg1 = (bls::PopSchemeMPL *) 0 ;
   vector< bls::G1Element > *arg2 = 0 ;
@@ -11067,7 +11067,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1fastAgg
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1fastAggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1fastAggregateVerify_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::PopSchemeMPL *arg1 = (bls::PopSchemeMPL *) 0 ;
   vector< vector< uint8_t > > *arg2 = 0 ;
@@ -11149,7 +11149,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1fastAgg
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1PopSchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1PopSchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::PopSchemeMPL *arg1 = (bls::PopSchemeMPL *) 0 ;
   
   (void)jenv;
@@ -11191,7 +11191,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1PopSchemeMPL(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1LegacySchemeMPL(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_new_1LegacySchemeMPL(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::LegacySchemeMPL *result = 0 ;
   
@@ -11235,7 +11235,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_new_1LegacySchemeMPL(JNI
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1skToPk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1skToPk(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jbyteArray jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -11293,7 +11293,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1sk
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jbyteArray jarg3) {
   jlong jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   bls::PrivateKey *arg2 = 0 ;
@@ -11355,7 +11355,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1sign(JN
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jbyteArray jarg3, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -11426,7 +11426,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1veri
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jbyteArray JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jbyteArray jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   vector< vector< uint8_t > > *arg2 = 0 ;
@@ -11484,7 +11484,7 @@ SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1ag
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregateSecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1aggregateSecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jlong jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   std::vector< bls::G1Element > *arg2 = 0 ;
@@ -11553,7 +11553,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggrega
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1verifySecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1verifySecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jbyteArray jarg4) {
   jboolean jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   std::vector< bls::G1Element > *arg2 = 0 ;
@@ -11622,7 +11622,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1veri
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggregateVerify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1aggregateVerify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_) {
   jboolean jresult = 0 ;
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   vector< bls::G1Element > *arg2 = 0 ;
@@ -11658,7 +11658,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1aggr
 }
 
 
-SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1LegacySchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_zipj_bls_ZIPJBLSJNI_delete_1LegacySchemeMPL(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::LegacySchemeMPL *arg1 = (bls::LegacySchemeMPL *) 0 ;
   
   (void)jenv;
@@ -11700,7 +11700,7 @@ SWIGEXPORT void JNICALL Java_org_dashj_bls_DASHJBLSJNI_delete_1LegacySchemeMPL(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_privateKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_privateKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -11759,7 +11759,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_privateKeyShare(JNIEnv *
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_publicKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_publicKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -11818,7 +11818,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_publicKeyShare(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_signatureShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_signatureShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -11877,7 +11877,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_signatureShare(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -11936,7 +11936,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_sign(JNIEnv *jenv, jclas
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jboolean JNICALL Java_org_zipj_bls_ZIPJBLSJNI_verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3, jobject jarg3_) {
   jboolean jresult = 0 ;
   bls::G1Element *arg1 = 0 ;
   bls::Bytes *arg2 = 0 ;
@@ -12002,7 +12002,7 @@ SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_DASHJBLSJNI_verify(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_privateKeyRecover(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_privateKeyRecover(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = 0 ;
   std::vector< std::vector< uint8_t > > *arg2 = 0 ;
@@ -12060,7 +12060,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_privateKeyRecover(JNIEnv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_publicKeyRecover(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_publicKeyRecover(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   std::vector< bls::G1Element > *arg1 = 0 ;
   std::vector< std::vector< uint8_t > > *arg2 = 0 ;
@@ -12118,7 +12118,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_publicKeyRecover(JNIEnv 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_signatureRecover(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_signatureRecover(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   std::vector< bls::G2Element > *arg1 = 0 ;
   std::vector< std::vector< uint8_t > > *arg2 = 0 ;
@@ -12176,7 +12176,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_signatureRecover(JNIEnv 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_BasicSchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
     jlong baseptr = 0;
     (void)jenv;
     (void)jcls;
@@ -12184,7 +12184,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_BasicSchemeMPL_1SWIGUpca
     return baseptr;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_AugSchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
     jlong baseptr = 0;
     (void)jenv;
     (void)jcls;
@@ -12192,7 +12192,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_AugSchemeMPL_1SWIGUpcast
     return baseptr;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_PopSchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
     jlong baseptr = 0;
     (void)jenv;
     (void)jcls;
@@ -12200,7 +12200,7 @@ SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_PopSchemeMPL_1SWIGUpcast
     return baseptr;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_dashj_bls_DASHJBLSJNI_LegacySchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_zipj_bls_ZIPJBLSJNI_LegacySchemeMPL_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
     jlong baseptr = 0;
     (void)jenv;
     (void)jcls;

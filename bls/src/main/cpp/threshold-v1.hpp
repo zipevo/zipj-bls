@@ -1,5 +1,5 @@
-#ifndef DASHJ_BLS_THRESHOLD_HPP
-#define DASHJ_BLS_THRESHOLD_HPP
+#ifndef ZIPJ_BLS_THRESHOLD_HPP
+#define ZIPJ_BLS_THRESHOLD_HPP
 
 #include "bls-signatures/src/threshold.hpp"
 #include <stdint.h>

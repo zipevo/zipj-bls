@@ -1,5 +1,5 @@
 #
-# dashj-bls
+# zipj-bls
 #
 # requires that libbls.a has been built with the build-bls-signatures.sh script
 #
@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_CXX_FLAGS, "-fpermissive")
 add_library( # Sets the name of the library.
-        dashjbls
+        zipjbls
         # Sets the library as a shared library.
        SHARED
         # Provides a relative path to your source file(s).
@@ -37,14 +37,14 @@ include_directories(${JNI_INCLUDE_DIRS}
 
 # This removes the 'lib' prefix from target library name on windows
 IF ("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
-    set_target_properties(dashjbls PROPERTIES PREFIX "")
+    set_target_properties(zipjbls PROPERTIES PREFIX "")
 ENDIF()
 set(BUILD_BLS_PYTHON_BINDINGS "0" CACHE STRING "")
 target_link_libraries( # Specifies the target library.
-        dashjbls
+        zipjbls
 
         # Links the target library to the bls library
-        bls-dash)
+        bls-zip)
 
 # import the bls-signature project as is
 add_subdirectory(src/main/cpp/bls-signatures)

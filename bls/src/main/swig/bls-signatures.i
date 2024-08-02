@@ -1,4 +1,4 @@
-%module DASHJBLS
+%module ZIPJBLS
 %{
 #include "bls-signatures/src/bls.hpp"
 #include "bls-signatures/src/chaincode.hpp"

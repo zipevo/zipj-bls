@@ -1,7 +1,7 @@
 file(GLOB HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/*.hpp)
 source_group("SrcHeaders" FILES ${HEADERS})
 
-add_library(bls-dash
+add_library(bls-zip
   ${HEADERS}
   ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/privatekey.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/bls.cpp
@@ -14,7 +14,7 @@ add_library(bls-dash
   ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures/src/threshold.cpp
 )
 
-target_include_directories(bls-dash
+target_include_directories(bls-zip
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/bls-signatures
     $<$<BOOL:${GMP_FOUND}>:${GMP_INCLUDES}>
@@ -22,21 +22,21 @@ target_include_directories(bls-dash
     ${relic_BINARY_DIR}/include
 )
 
-target_compile_definitions(bls-dash
+target_compile_definitions(bls-zip
   PRIVATE
     BLSALLOC_SODIUM=1
 )
 
-target_link_libraries(bls-dash
+target_link_libraries(bls-zip
   PUBLIC
     relic_s
     sodium
 )
 
-install(DIRECTORY ${relic_SOURCE_DIR}/include/ DESTINATION include/bls-dash)
-install(DIRECTORY ${relic_BINARY_DIR}/include/ DESTINATION include/bls-dash)
-install(FILES ${HEADERS} DESTINATION include/bls-dash)
-install(FILES $<TARGET_FILE:bls-dash> DESTINATION lib)
+install(DIRECTORY ${relic_SOURCE_DIR}/include/ DESTINATION include/bls-zip)
+install(DIRECTORY ${relic_BINARY_DIR}/include/ DESTINATION include/bls-zip)
+install(FILES ${HEADERS} DESTINATION include/bls-zip)
+install(FILES $<TARGET_FILE:bls-zip> DESTINATION lib)
 
 if(BUILD_BLS_TESTS)
   add_executable(runtest bls-signatures/src/test.cpp)
@@ -53,10 +53,10 @@ if(BUILD_BLS_TESTS)
   else()
     target_include_directories(runtest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../contrib/catch)
   endif()
-  target_link_libraries(runtest PRIVATE bls-dash)
+  target_link_libraries(runtest PRIVATE bls-zip)
 endif()
 
 if(BUILD_BLS_BENCHMARKS)
   add_executable(runbench bls-signatures/src/test-bench.cpp)
-  target_link_libraries(runbench PRIVATE bls-dash)
+  target_link_libraries(runbench PRIVATE bls-zip)
 endif()
